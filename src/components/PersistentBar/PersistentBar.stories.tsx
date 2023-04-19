@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { PersistentBar, PersistentBarType } from './';
 import { IconName } from '../Icon';
 import { PaginationLayoutOptions } from '../Pagination';
@@ -41,40 +41,40 @@ export default {
   },
 } as ComponentMeta<typeof PersistentBar>;
 
-const Bottom_Bar_With_Text_Story: ComponentStory<typeof PersistentBar> = (
-  args
-) => <PersistentBar {...args} />;
+const Bottom_Bar_With_Text_Story: StoryFn<typeof PersistentBar> = (args) => (
+  <PersistentBar {...args} />
+);
 
 export const BottomBarWithText = Bottom_Bar_With_Text_Story.bind({});
 
-const Bottom_Bar_Secondary_Buttons_Story: ComponentStory<
-  typeof PersistentBar
-> = (args) => <PersistentBar {...args} />;
+const Bottom_Bar_Secondary_Buttons_Story: StoryFn<typeof PersistentBar> = (
+  args
+) => <PersistentBar {...args} />;
 
 export const BottomBarSecondaryButtons =
   Bottom_Bar_Secondary_Buttons_Story.bind({});
 
-const Bottom_Bar_Buttons_On_Left_Story: ComponentStory<typeof PersistentBar> = (
+const Bottom_Bar_Buttons_On_Left_Story: StoryFn<typeof PersistentBar> = (
   args
 ) => <PersistentBar {...args} />;
 
 export const BottomBarButtonsOnLeft = Bottom_Bar_Buttons_On_Left_Story.bind({});
 
-const Top_Bar_Buttons_Story: ComponentStory<typeof PersistentBar> = (args) => (
+const Top_Bar_Buttons_Story: StoryFn<typeof PersistentBar> = (args) => (
   <PersistentBar {...args} />
 );
 
 export const TopBarButtons = Top_Bar_Buttons_Story.bind({});
 
-const Top_Bar_With_Text_Story: ComponentStory<typeof PersistentBar> = (
-  args
-) => <PersistentBar {...args} />;
+const Top_Bar_With_Text_Story: StoryFn<typeof PersistentBar> = (args) => (
+  <PersistentBar {...args} />
+);
 
 export const TopBarWithText = Top_Bar_With_Text_Story.bind({});
 
-const Top_Bar_Pagination_Story: ComponentStory<typeof PersistentBar> = (
-  args
-) => <PersistentBar {...args} />;
+const Top_Bar_Pagination_Story: StoryFn<typeof PersistentBar> = (args) => (
+  <PersistentBar {...args} />
+);
 
 export const TopBarPagination = Top_Bar_Pagination_Story.bind({});
 

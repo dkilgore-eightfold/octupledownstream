@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, StoryFn } from '@storybook/react';
 import {
   Step,
   Stepper,
@@ -130,7 +130,7 @@ export default {
   },
 } as ComponentMeta<typeof Stepper>;
 
-const Default_Story: ComponentStory<typeof Stepper> = (args) => {
+const Default_Story: StoryFn<typeof Stepper> = (args) => {
   const workflow: Step[] = [1, 2, 3, 4, 5].map((i: number) => ({
     index: i,
     content: `Step label ${i}`,

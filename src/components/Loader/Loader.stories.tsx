@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Loader, LoaderSize } from './';
 
 export default {
@@ -29,9 +29,7 @@ export default {
   },
 } as ComponentMeta<typeof Loader>;
 
-const Loader_Story: ComponentStory<typeof Loader> = (args) => (
-  <Loader {...args} />
-);
+const Loader_Story: StoryFn<typeof Loader> = (args) => <Loader {...args} />;
 
 export const Default = Loader_Story.bind({});
 

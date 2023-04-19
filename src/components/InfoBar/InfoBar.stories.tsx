@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { InfoBar, InfoBarType } from './';
 import { IconName } from '../Icon';
 
@@ -31,25 +31,19 @@ export default {
   },
 } as ComponentMeta<typeof InfoBar>;
 
-const Neutral_Story: ComponentStory<typeof InfoBar> = (args) => (
-  <InfoBar {...args} />
-);
+const Neutral_Story: StoryFn<typeof InfoBar> = (args) => <InfoBar {...args} />;
 
 export const Neutral = Neutral_Story.bind({});
 
-const Positive_Story: ComponentStory<typeof InfoBar> = (args) => (
-  <InfoBar {...args} />
-);
+const Positive_Story: StoryFn<typeof InfoBar> = (args) => <InfoBar {...args} />;
 
 export const Positive = Positive_Story.bind({});
 
-const Warning_Story: ComponentStory<typeof InfoBar> = (args) => (
-  <InfoBar {...args} />
-);
+const Warning_Story: StoryFn<typeof InfoBar> = (args) => <InfoBar {...args} />;
 
 export const Warning = Warning_Story.bind({});
 
-const Disruptive_Story: ComponentStory<typeof InfoBar> = (args) => (
+const Disruptive_Story: StoryFn<typeof InfoBar> = (args) => (
   <InfoBar {...args} />
 );
 

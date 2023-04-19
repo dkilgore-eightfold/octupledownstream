@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import {
   BaseButton,
   ButtonIconAlign,
@@ -161,52 +161,52 @@ export default {
   },
 } as ComponentMeta<typeof BaseButton>;
 
-const Primary_Button_Story: ComponentStory<typeof PrimaryButton> = (args) => (
+const Primary_Button_Story: StoryFn<typeof PrimaryButton> = (args) => (
   <PrimaryButton {...args} />
 );
 
 export const Primary = Primary_Button_Story.bind({});
 export const Counter = Primary_Button_Story.bind({});
 
-const Secondary_Button_Story: ComponentStory<typeof SecondaryButton> = (
-  args
-) => <SecondaryButton {...args} />;
+const Secondary_Button_Story: StoryFn<typeof SecondaryButton> = (args) => (
+  <SecondaryButton {...args} />
+);
 
 export const Secondary = Secondary_Button_Story.bind({});
 
-const Default_Button_Story: ComponentStory<typeof DefaultButton> = (args) => (
+const Default_Button_Story: StoryFn<typeof DefaultButton> = (args) => (
   <DefaultButton {...args} />
 );
 
 export const Default = Default_Button_Story.bind({});
 
-const Neutral_Button_Story: ComponentStory<typeof NeutralButton> = (args) => (
+const Neutral_Button_Story: StoryFn<typeof NeutralButton> = (args) => (
   <NeutralButton {...args} />
 );
 
 export const Neutral = Neutral_Button_Story.bind({});
 
-const System_UI_Button_Story: ComponentStory<typeof SystemUIButton> = (
-  args
-) => <SystemUIButton {...args} />;
+const System_UI_Button_Story: StoryFn<typeof SystemUIButton> = (args) => (
+  <SystemUIButton {...args} />
+);
 
 export const System_UI = System_UI_Button_Story.bind({});
 
-const Toggle_Button_Story: ComponentStory<typeof PrimaryButton> = (args) => (
+const Toggle_Button_Story: StoryFn<typeof PrimaryButton> = (args) => (
   <PrimaryButton {...args} />
 );
 
 export const Toggle = Toggle_Button_Story.bind({});
 export const Toggle_With_Counter = Toggle_Button_Story.bind({});
 
-const Split_Button_Story: ComponentStory<typeof PrimaryButton> = (args) => (
+const Split_Button_Story: StoryFn<typeof PrimaryButton> = (args) => (
   <PrimaryButton {...args} />
 );
 
 export const Split = Split_Button_Story.bind({});
 export const Split_With_Counter = Split_Button_Story.bind({});
 
-const Floating_Button_Story: ComponentStory<typeof PrimaryButton> = (args) => (
+const Floating_Button_Story: StoryFn<typeof PrimaryButton> = (args) => (
   <PrimaryButton {...args} />
 );
 

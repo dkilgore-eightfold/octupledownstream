@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Icon, IconName } from '../Icon';
 import { Link } from './';
 
@@ -60,7 +60,7 @@ export default {
   },
 } as ComponentMeta<typeof Link>;
 
-const Link_Story: ComponentStory<typeof Link> = (args) => {
+const Link_Story: StoryFn<typeof Link> = (args) => {
   // Prevents :visited from persisting
   const testAnchor = (): string => {
     return `#${Math.floor(Math.random() * 1000)}-eftestanchor`;

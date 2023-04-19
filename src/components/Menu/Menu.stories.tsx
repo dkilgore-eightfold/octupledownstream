@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, StoryFn } from '@storybook/react';
 import {
   Menu,
   MenuItemIconAlign,
@@ -243,31 +243,31 @@ const SubHeaderOverlay = (args: any) => {
   );
 };
 
-const Basic_Menu_Story: ComponentStory<typeof Menu> = (args) => (
+const Basic_Menu_Story: StoryFn<typeof Menu> = (args) => (
   <Dropdown overlay={BasicOverlay(args)}>
     <DefaultButton text={'Menu dropdown'} />
   </Dropdown>
 );
 
-const Menu_Story: ComponentStory<typeof Menu> = (args) => (
+const Menu_Story: StoryFn<typeof Menu> = (args) => (
   <Dropdown overlay={LinkOverlay(args)}>
     <DefaultButton text={'Menu dropdown'} />
   </Dropdown>
 );
 
-const Menu_Header_Story: ComponentStory<typeof Menu> = (args) => (
+const Menu_Header_Story: StoryFn<typeof Menu> = (args) => (
   <Dropdown overlay={BasicOverlay(args)}>
     <DefaultButton text={'Menu dropdown'} />
   </Dropdown>
 );
 
-const Menu_Sub_Header_Story: ComponentStory<typeof Menu> = (args) => (
+const Menu_Sub_Header_Story: StoryFn<typeof Menu> = (args) => (
   <Dropdown overlay={SubHeaderOverlay(args)}>
     <DefaultButton text={'Menu dropdown'} />
   </Dropdown>
 );
 
-const Cascading_Menu_Story: ComponentStory<typeof Menu> = (args) => {
+const Cascading_Menu_Story: StoryFn<typeof Menu> = (args) => {
   const htmlDir = useCanvasDirection();
 
   return (

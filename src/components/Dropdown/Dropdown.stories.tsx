@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import {
   ButtonIconAlign,
   ButtonTextAlign,
@@ -131,7 +131,7 @@ const Overlay = () => (
   />
 );
 
-const Dropdown_Button_Story: ComponentStory<typeof Dropdown> = (args) => {
+const Dropdown_Button_Story: StoryFn<typeof Dropdown> = (args) => {
   const [visible, setVisibility] = useState(false);
   return (
     <Dropdown
@@ -152,7 +152,7 @@ const Dropdown_Button_Story: ComponentStory<typeof Dropdown> = (args) => {
 
 export const Dropdown_Button = Dropdown_Button_Story.bind({});
 
-const Dropdown_IconButton_Story: ComponentStory<typeof Dropdown> = (args) => {
+const Dropdown_IconButton_Story: StoryFn<typeof Dropdown> = (args) => {
   const [visible, setVisibility] = useState(false);
   return (
     <Dropdown
@@ -174,7 +174,7 @@ const Dropdown_IconButton_Story: ComponentStory<typeof Dropdown> = (args) => {
 
 export const Dropdown_IconButton = Dropdown_IconButton_Story.bind({});
 
-const Dropdown_Div_Story: ComponentStory<typeof Dropdown> = (args) => {
+const Dropdown_Div_Story: StoryFn<typeof Dropdown> = (args) => {
   const [visible, setVisibility] = useState(false);
   return (
     <Dropdown

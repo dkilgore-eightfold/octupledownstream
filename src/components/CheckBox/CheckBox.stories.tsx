@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import {
   CheckBox,
   CheckBoxGroup,
@@ -102,13 +102,13 @@ export default {
   },
 } as ComponentMeta<typeof CheckBox>;
 
-const CheckBox_Story: ComponentStory<typeof CheckBox> = (args) => (
+const CheckBox_Story: StoryFn<typeof CheckBox> = (args) => (
   <CheckBox checked={true} {...args} />
 );
 
 export const Check_Box = CheckBox_Story.bind({});
 
-const CheckBox_Long_text_Story: ComponentStory<typeof CheckBox> = (args) => (
+const CheckBox_Long_text_Story: StoryFn<typeof CheckBox> = (args) => (
   <div style={{ width: 200 }}>
     <CheckBox checked={true} {...args} />
   </div>
@@ -116,7 +116,7 @@ const CheckBox_Long_text_Story: ComponentStory<typeof CheckBox> = (args) => (
 
 export const Check_Box_Long_Text = CheckBox_Long_text_Story.bind({});
 
-const CheckBoxGroup_Story: ComponentStory<typeof CheckBoxGroup> = (args) => {
+const CheckBoxGroup_Story: StoryFn<typeof CheckBoxGroup> = (args) => {
   const [selected, setSelected] = useState<CheckboxValueType[]>([]);
   return (
     <CheckBoxGroup

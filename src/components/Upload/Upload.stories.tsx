@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import Upload from '.';
 import {
   OcFile,
@@ -56,7 +56,7 @@ const snackArgs: Object = {
   id: 'mySnackId',
 };
 
-const Basic_Story: ComponentStory<typeof Upload> = () => {
+const Basic_Story: StoryFn<typeof Upload> = () => {
   const props: UploadProps = {
     name: 'file',
     action: 'http://run.mocky.io/v3/35a4936d-4e32-4088-b9d1-47cd1002fefd',
@@ -96,7 +96,7 @@ const Basic_Story: ComponentStory<typeof Upload> = () => {
   );
 };
 
-const Basic_With_Upload_List_Story: ComponentStory<typeof Upload> = () => {
+const Basic_With_Upload_List_Story: StoryFn<typeof Upload> = () => {
   const props: UploadProps = {
     name: 'file',
     action: 'http://run.mocky.io/v3/35a4936d-4e32-4088-b9d1-47cd1002fefd',
@@ -140,7 +140,7 @@ const Basic_With_Upload_List_Story: ComponentStory<typeof Upload> = () => {
   );
 };
 
-const Drag_and_Drop_Single_Small_Story: ComponentStory<typeof Upload> = () => {
+const Drag_and_Drop_Single_Small_Story: StoryFn<typeof Upload> = () => {
   const props: UploadProps = {
     name: 'file',
     maxCount: 1,
@@ -180,9 +180,7 @@ const Drag_and_Drop_Single_Small_Story: ComponentStory<typeof Upload> = () => {
   );
 };
 
-const Drag_and_Drop_Multiple_Small_Story: ComponentStory<
-  typeof Upload
-> = () => {
+const Drag_and_Drop_Multiple_Small_Story: StoryFn<typeof Upload> = () => {
   const props: UploadProps = {
     name: 'file',
     multiple: true,
@@ -222,7 +220,7 @@ const Drag_and_Drop_Multiple_Small_Story: ComponentStory<
   );
 };
 
-const Drag_and_Drop_Single_Medium_Story: ComponentStory<typeof Upload> = () => {
+const Drag_and_Drop_Single_Medium_Story: StoryFn<typeof Upload> = () => {
   const props: UploadProps = {
     name: 'file',
     maxCount: 1,
@@ -258,9 +256,7 @@ const Drag_and_Drop_Single_Medium_Story: ComponentStory<typeof Upload> = () => {
   );
 };
 
-const Drag_and_Drop_Multiple_Medium_Story: ComponentStory<
-  typeof Upload
-> = () => {
+const Drag_and_Drop_Multiple_Medium_Story: StoryFn<typeof Upload> = () => {
   const props: UploadProps = {
     name: 'file',
     multiple: true,
@@ -300,7 +296,7 @@ const Drag_and_Drop_Multiple_Medium_Story: ComponentStory<
   );
 };
 
-const Drag_and_Drop_Single_Large_Story: ComponentStory<typeof Upload> = () => {
+const Drag_and_Drop_Single_Large_Story: StoryFn<typeof Upload> = () => {
   const props: UploadProps = {
     name: 'file',
     maxCount: 1,
@@ -337,9 +333,7 @@ const Drag_and_Drop_Single_Large_Story: ComponentStory<typeof Upload> = () => {
   );
 };
 
-const Drag_and_Drop_Multiple_Large_Story: ComponentStory<
-  typeof Upload
-> = () => {
+const Drag_and_Drop_Multiple_Large_Story: StoryFn<typeof Upload> = () => {
   const props: UploadProps = {
     name: 'file',
     multiple: true,
@@ -380,7 +374,7 @@ const Drag_and_Drop_Multiple_Large_Story: ComponentStory<
   );
 };
 
-const Image_List_Story: ComponentStory<typeof Upload> = () => {
+const Image_List_Story: StoryFn<typeof Upload> = () => {
   const [previewOpen, setPreviewOpen] = useState<boolean>(false);
   const [previewImage, setPreviewImage] = useState<string>('');
   const [previewTitle, setPreviewTitle] = useState<string>('');
@@ -479,7 +473,7 @@ const Image_List_Story: ComponentStory<typeof Upload> = () => {
   );
 };
 
-const Image_Editor_Story: ComponentStory<typeof Upload> = () => {
+const Image_Editor_Story: StoryFn<typeof Upload> = () => {
   const [fileList, setFileList] = useState<UploadFile[]>([
     {
       uid: '-1',
@@ -533,7 +527,7 @@ const Image_Editor_Story: ComponentStory<typeof Upload> = () => {
   );
 };
 
-const Basic_Deferred_API_Story: ComponentStory<typeof Upload> = () => {
+const Basic_Deferred_API_Story: StoryFn<typeof Upload> = () => {
   const [data, setData] = useState<Record<string, unknown>>({});
   const [thumbUrl, setThumbUrl] = useState<string>('');
 

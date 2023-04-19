@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import {
   Pagination,
   PaginationLayoutOptions,
@@ -54,49 +54,49 @@ export default {
   },
 } as ComponentMeta<typeof Pagination>;
 
-const Basic_Few_Story: ComponentStory<typeof Pagination> = (args) => (
+const Basic_Few_Story: StoryFn<typeof Pagination> = (args) => (
   <Pagination {...args} />
 );
 
 export const Basic_Few = Basic_Few_Story.bind({});
 
-const Basic_Many_Story: ComponentStory<typeof Pagination> = (args) => (
+const Basic_Many_Story: StoryFn<typeof Pagination> = (args) => (
   <Pagination {...args} />
 );
 
 export const Basic_Many = Basic_Many_Story.bind({});
 
-const Dots_Story: ComponentStory<typeof Pagination> = (args) => (
+const Dots_Story: StoryFn<typeof Pagination> = (args) => (
   <Pagination {...args} />
 );
 
 export const Dots = Dots_Story.bind({});
 
-const Total_Item_Count_Story: ComponentStory<typeof Pagination> = (args) => (
+const Total_Item_Count_Story: StoryFn<typeof Pagination> = (args) => (
   <Pagination {...args} />
 );
 
 export const Total_Item_Count = Total_Item_Count_Story.bind({});
 
-const Change_Page_Size_Story: ComponentStory<typeof Pagination> = (args) => (
+const Change_Page_Size_Story: StoryFn<typeof Pagination> = (args) => (
   <Pagination {...args} />
 );
 
 export const Change_Page_Size = Change_Page_Size_Story.bind({});
 
-const Jump_To_Story: ComponentStory<typeof Pagination> = (args) => (
+const Jump_To_Story: StoryFn<typeof Pagination> = (args) => (
   <Pagination {...args} />
 );
 
 export const Jump_To = Jump_To_Story.bind({});
 
-const All_Combined_Story: ComponentStory<typeof Pagination> = (args) => (
+const All_Combined_Story: StoryFn<typeof Pagination> = (args) => (
   <Pagination {...args} />
 );
 
 export const All_Combined = All_Combined_Story.bind({});
 
-const Simplified_Story: ComponentStory<typeof Pagination> = (args) => (
+const Simplified_Story: StoryFn<typeof Pagination> = (args) => (
   <Pagination {...args} />
 );
 

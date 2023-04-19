@@ -16,9 +16,7 @@ npm-debug.log*
 README.md
 stats.json
 tsconfig.json
-webpack.common.js
-webpack.dev.js
-webpack.prod.js
+vite.config.js
 yarn.lock
 yarn-debug.log*
 yarn-error.log*

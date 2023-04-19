@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Tabs, Tab, TabSize, TabVariant } from './';
 import { IconName } from '../Icon';
 
@@ -84,7 +84,7 @@ const scrollableTabs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => ({
   ...(i === 4 ? { disabled: true } : {}),
 }));
 
-const Default_Story: ComponentStory<typeof Tabs> = (args) => {
+const Default_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -99,7 +99,7 @@ export const Default = Default_Story.bind({});
 
 export const DefaultUnderlined = Default_Story.bind({});
 
-const Default_Loading_Story: ComponentStory<typeof Tabs> = (args) => {
+const Default_Loading_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -112,7 +112,7 @@ const Default_Loading_Story: ComponentStory<typeof Tabs> = (args) => {
 
 export const DefaultLoader = Default_Loading_Story.bind({});
 
-const Small_Story: ComponentStory<typeof Tabs> = (args) => {
+const Small_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -125,7 +125,7 @@ const Small_Story: ComponentStory<typeof Tabs> = (args) => {
 
 export const Small = Small_Story.bind({});
 
-const With_Badge_Story: ComponentStory<typeof Tabs> = (args) => {
+const With_Badge_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -138,7 +138,7 @@ const With_Badge_Story: ComponentStory<typeof Tabs> = (args) => {
 
 export const With_Badge = With_Badge_Story.bind({});
 
-const Icon_Story: ComponentStory<typeof Tabs> = (args) => {
+const Icon_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -151,7 +151,7 @@ const Icon_Story: ComponentStory<typeof Tabs> = (args) => {
 
 export const Icon = Icon_Story.bind({});
 
-const Icon_Label_Story: ComponentStory<typeof Tabs> = (args) => {
+const Icon_Label_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -164,7 +164,7 @@ const Icon_Label_Story: ComponentStory<typeof Tabs> = (args) => {
 
 export const Icon_Label = Icon_Label_Story.bind({});
 
-const Scrollable_Story: ComponentStory<typeof Tabs> = (args) => {
+const Scrollable_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -177,7 +177,7 @@ const Scrollable_Story: ComponentStory<typeof Tabs> = (args) => {
 
 export const Scrollable = Scrollable_Story.bind({});
 
-const Pill_Default_Story: ComponentStory<typeof Tabs> = (args) => {
+const Pill_Default_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -190,7 +190,7 @@ const Pill_Default_Story: ComponentStory<typeof Tabs> = (args) => {
 
 export const Pill_Default = Pill_Default_Story.bind({});
 
-const Pill_With_Badge_Story: ComponentStory<typeof Tabs> = (args) => {
+const Pill_With_Badge_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -203,7 +203,7 @@ const Pill_With_Badge_Story: ComponentStory<typeof Tabs> = (args) => {
 
 export const Pill_With_Badge = Pill_With_Badge_Story.bind({});
 
-const Pill_Icon_Story: ComponentStory<typeof Tabs> = (args) => {
+const Pill_Icon_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs
@@ -216,7 +216,7 @@ const Pill_Icon_Story: ComponentStory<typeof Tabs> = (args) => {
 
 export const Pill_Icon = Pill_Icon_Story.bind({});
 
-const Pill_Icon_Label_Story: ComponentStory<typeof Tabs> = (args) => {
+const Pill_Icon_Label_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs

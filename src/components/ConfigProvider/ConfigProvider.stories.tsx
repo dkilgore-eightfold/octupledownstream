@@ -1,6 +1,6 @@
 import React, { FC, useState, useRef, useCallback } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, StoryFn } from '@storybook/react';
 import { useArgs } from '@storybook/client-api';
 import {
   ButtonSize,
@@ -618,7 +618,7 @@ const Overlay = () => (
 const DEFAULT_FOCUS_VISIBLE: boolean = true;
 const DEFAULT_FOCUS_VISIBLE_ELEMENT: HTMLElement = document.documentElement;
 
-const Theming_Story: ComponentStory<typeof ConfigProvider> = (args) => {
+const Theming_Story: StoryFn<typeof ConfigProvider> = (args) => {
   return <ConfigProvider {...args} />;
 };
 
@@ -683,7 +683,7 @@ const snackArgs: Object = {
   id: 'mySnackId',
 };
 
-const Locale_Story: ComponentStory<typeof ConfigProvider> = (args) => {
+const Locale_Story: StoryFn<typeof ConfigProvider> = (args) => {
   const [_, updateArgs] = useArgs();
   const [locale, setLocale] = useState(enUS);
   const [localeValue, setLocaleValue] = useState<string>('en_US');

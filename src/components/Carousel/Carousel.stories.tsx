@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, StoryFn } from '@storybook/react';
 import { Carousel, Slide } from './';
 
 export default {
@@ -36,7 +36,7 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof Carousel>;
 
-const Slide_Story: ComponentStory<typeof Carousel> = (args) => (
+const Slide_Story: StoryFn<typeof Carousel> = (args) => (
   <Carousel {...args}>
     <Slide>
       <div
@@ -90,9 +90,7 @@ const sampleList: SampleItem[] = [
   key: `key-${i}`,
 }));
 
-const Scroll_Story: ComponentStory<typeof Carousel> = (args) => (
-  <Carousel {...args} />
-);
+const Scroll_Story: StoryFn<typeof Carousel> = (args) => <Carousel {...args} />;
 
 export const Slider = Slide_Story.bind({});
 export const Scroller = Scroll_Story.bind({});

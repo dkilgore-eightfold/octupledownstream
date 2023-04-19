@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Panel, PanelSize } from './';
 import { PanelHeader } from './PanelHeader';
 import { IconName } from '../Icon';
@@ -103,7 +103,7 @@ export default {
   },
 } as ComponentMeta<typeof Panel>;
 
-const Small_Story: ComponentStory<typeof Panel> = (args) => {
+const Small_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -124,7 +124,7 @@ const Small_Story: ComponentStory<typeof Panel> = (args) => {
 
 export const Small = Small_Story.bind({});
 
-const Medium_Story: ComponentStory<typeof Panel> = (args) => {
+const Medium_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -145,7 +145,7 @@ const Medium_Story: ComponentStory<typeof Panel> = (args) => {
 
 export const Medium = Medium_Story.bind({});
 
-const Large_Story: ComponentStory<typeof Panel> = (args) => {
+const Large_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -166,7 +166,7 @@ const Large_Story: ComponentStory<typeof Panel> = (args) => {
 
 export const Large = Large_Story.bind({});
 
-const Stacked_Story: ComponentStory<typeof Panel> = (args) => {
+const Stacked_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<Record<string, boolean>>({});
   return (
     <>
@@ -227,7 +227,7 @@ const Stacked_Story: ComponentStory<typeof Panel> = (args) => {
 
 export const Stacked = Stacked_Story.bind({});
 
-const Left_Story: ComponentStory<typeof Panel> = (args) => {
+const Left_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -248,7 +248,7 @@ const Left_Story: ComponentStory<typeof Panel> = (args) => {
 
 export const Left = Left_Story.bind({});
 
-const Bottom_Story: ComponentStory<typeof Panel> = (args) => {
+const Bottom_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -269,7 +269,7 @@ const Bottom_Story: ComponentStory<typeof Panel> = (args) => {
 
 export const Bottom = Bottom_Story.bind({});
 
-const Top_Story: ComponentStory<typeof Panel> = (args) => {
+const Top_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -290,7 +290,7 @@ const Top_Story: ComponentStory<typeof Panel> = (args) => {
 
 export const Top = Top_Story.bind({});
 
-const Header_Actions_Story: ComponentStory<typeof Panel> = (args) => {
+const Header_Actions_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -311,7 +311,7 @@ const Header_Actions_Story: ComponentStory<typeof Panel> = (args) => {
 
 export const Header_Actions = Header_Actions_Story.bind({});
 
-const Panel_Header_Story: ComponentStory<typeof Panel> = (args) => {
+const Panel_Header_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>

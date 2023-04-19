@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, StoryFn } from '@storybook/react';
 import { List } from '../List';
 import { IconName } from '../Icon';
 import { Accordion, AccordionProps, AccordionSize, AccordionShape } from './';
@@ -78,19 +78,17 @@ const listItems: AccordionProps[] = [
   },
 ];
 
-const Single_Story: ComponentStory<typeof Accordion> = (args) => (
+const Single_Story: StoryFn<typeof Accordion> = (args) => (
   <Accordion {...args} />
 );
 
 export const Single = Single_Story.bind({});
 
-const List_Vertical_Story: ComponentStory<typeof List> = (args) => (
-  <List {...args} />
-);
+const List_Vertical_Story: StoryFn<typeof List> = (args) => <List {...args} />;
 
 export const List_Vertical = List_Vertical_Story.bind({});
 
-const List_Horizontal_Story: ComponentStory<typeof List> = (args) => (
+const List_Horizontal_Story: StoryFn<typeof List> = (args) => (
   <List {...args} />
 );
 

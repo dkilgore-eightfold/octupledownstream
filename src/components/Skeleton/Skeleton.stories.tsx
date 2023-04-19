@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, StoryFn } from '@storybook/react';
 import { Skeleton } from './Skeleton';
 import {
   SkeletonAnimation,
@@ -46,13 +46,13 @@ export default {
   },
 } as ComponentMeta<typeof Skeleton>;
 
-const Default_Story: ComponentStory<typeof Skeleton> = (args) => (
+const Default_Story: StoryFn<typeof Skeleton> = (args) => (
   <Skeleton {...args} />
 );
 
 export const Default = Default_Story.bind({});
 
-const Child_Wrapper_Story: ComponentStory<typeof Skeleton> = (args) => (
+const Child_Wrapper_Story: StoryFn<typeof Skeleton> = (args) => (
   <Skeleton {...args}>
     <DefaultButton text={'Sample button'} />
   </Skeleton>
@@ -60,7 +60,7 @@ const Child_Wrapper_Story: ComponentStory<typeof Skeleton> = (args) => (
 
 export const ChildWrapper = Child_Wrapper_Story.bind({});
 
-const SampleUsage_Story: ComponentStory<typeof Skeleton> = (args) => (
+const SampleUsage_Story: StoryFn<typeof Skeleton> = (args) => (
   <Stack direction="vertical" gap="xs" style={{ width: 210 }}>
     <Skeleton
       width={210}

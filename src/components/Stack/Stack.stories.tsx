@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Stack } from './Stack';
 import styles from './stack.stories.module.scss';
 
@@ -93,25 +93,25 @@ export default {
   },
 } as ComponentMeta<typeof Stack>;
 
-const Horizontal_Story: ComponentStory<typeof Stack> = (args) => {
+const Horizontal_Story: StoryFn<typeof Stack> = (args) => {
   return <Stack {...args}>{args.children}</Stack>;
 };
 
 export const Horizontal = Horizontal_Story.bind({});
 
-const Vertical_Story: ComponentStory<typeof Stack> = (args) => {
+const Vertical_Story: StoryFn<typeof Stack> = (args) => {
   return <Stack {...args}>{args.children}</Stack>;
 };
 
 export const Vertical = Vertical_Story.bind({});
 
-const Responsive_Story: ComponentStory<typeof Stack> = (args) => {
+const Responsive_Story: StoryFn<typeof Stack> = (args) => {
   return <Stack {...args}>{args.children}</Stack>;
 };
 
 export const Responsive = Responsive_Story.bind({});
 
-const Sample_Nav_List_Story: ComponentStory<typeof Stack> = (args) => {
+const Sample_Nav_List_Story: StoryFn<typeof Stack> = (args) => {
   return <Stack {...args}>{args.children}</Stack>;
 };
 

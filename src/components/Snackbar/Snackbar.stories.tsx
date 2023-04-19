@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { snack, Snackbar, SnackbarContainer } from './';
 import { ButtonSize, DefaultButton } from '../Button';
 import { InfoBarType } from '../InfoBar';
@@ -55,7 +55,7 @@ export default {
   },
 } as ComponentMeta<typeof Snackbar>;
 
-const Default_Story: ComponentStory<typeof Snackbar> = (args) => (
+const Default_Story: StoryFn<typeof Snackbar> = (args) => (
   <>
     <DefaultButton
       text="Serve snack"
@@ -68,7 +68,7 @@ const Default_Story: ComponentStory<typeof Snackbar> = (args) => (
 
 export const Default = Default_Story.bind({});
 
-const Closable_Story: ComponentStory<typeof Snackbar> = (args) => (
+const Closable_Story: StoryFn<typeof Snackbar> = (args) => (
   <>
     <DefaultButton
       text="Serve closable snack"
@@ -81,7 +81,7 @@ const Closable_Story: ComponentStory<typeof Snackbar> = (args) => (
 
 export const Closable = Closable_Story.bind({});
 
-const With_Action_Story: ComponentStory<typeof Snackbar> = (args) => (
+const With_Action_Story: StoryFn<typeof Snackbar> = (args) => (
   <>
     <DefaultButton
       text="Serve snack with action"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { ButtonSize, PrimaryButton } from '../Button';
 import { Tooltip, TooltipTheme } from './';
 
@@ -121,9 +121,7 @@ export default {
   },
 } as ComponentMeta<typeof Tooltip>;
 
-const Tooltip_Story: ComponentStory<typeof Tooltip> = (args) => (
-  <Tooltip {...args} />
-);
+const Tooltip_Story: StoryFn<typeof Tooltip> = (args) => <Tooltip {...args} />;
 
 export const Tooltips = Tooltip_Story.bind({});
 

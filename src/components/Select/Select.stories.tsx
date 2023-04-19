@@ -1,5 +1,5 @@
 import React, { FC, useState, useRef } from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { IconName } from '../Icon';
 import { Select } from './';
 import {
@@ -136,7 +136,7 @@ const DynamicSelect: FC<SelectProps> = (args) => {
   );
 };
 
-const Basic_Story: ComponentStory<typeof Select> = (args) => (
+const Basic_Story: StoryFn<typeof Select> = (args) => (
   <>
     <Wrapper>
       <Select {...args} />
@@ -144,13 +144,13 @@ const Basic_Story: ComponentStory<typeof Select> = (args) => (
   </>
 );
 
-const Dynamic_Story: ComponentStory<typeof Select> = (args) => (
+const Dynamic_Story: StoryFn<typeof Select> = (args) => (
   <Wrapper>
     <DynamicSelect {...args} />
   </Wrapper>
 );
 
-export type SelectStory = ComponentStory<React.FC<SelectProps>>;
+export type SelectStory = StoryFn<React.FC<SelectProps>>;
 export const Basic: SelectStory = Basic_Story.bind({});
 export const Dynamic_Width: SelectStory = Basic_Story.bind({});
 export const With_DefaultValue: SelectStory = Basic_Story.bind({});

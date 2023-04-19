@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Stat, StatThemeName, Tabs, TabSize, TabVariant } from './';
 import type { StatValidationStatus } from './';
 import { IconName } from '../Icon';
@@ -108,7 +108,7 @@ const statTabsThemed = [1, 2, 3, 4].map((i) => ({
   ...(i === 4 ? { disabled: true } : {}),
 }));
 
-const Stat_Story: ComponentStory<typeof Tabs> = (args) => {
+const Stat_Story: StoryFn<typeof Tabs> = (args) => {
   const [activeTabs, setActiveTabs] = useState({ defaultTab: 'tab1' });
   return (
     <Tabs

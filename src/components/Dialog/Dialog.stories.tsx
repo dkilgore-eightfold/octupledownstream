@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Dialog, DialogSize } from './';
 import { PrimaryButton } from '../Button';
 import { DialogHelper as dialogHelper } from './DialogHelper';
@@ -128,7 +128,7 @@ export default {
   },
 } as ComponentMeta<typeof Dialog>;
 
-const Medium_Story: ComponentStory<typeof Dialog> = (args) => {
+const Medium_Story: StoryFn<typeof Dialog> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -146,7 +146,7 @@ const Medium_Story: ComponentStory<typeof Dialog> = (args) => {
 
 export const Medium = Medium_Story.bind({});
 
-const Small_Story: ComponentStory<typeof Dialog> = (args) => {
+const Small_Story: StoryFn<typeof Dialog> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -168,7 +168,7 @@ const Small_Story: ComponentStory<typeof Dialog> = (args) => {
 
 export const Small = Small_Story.bind({});
 
-const DialogHelper_Story: ComponentStory<typeof Dialog> = (args) => (
+const DialogHelper_Story: StoryFn<typeof Dialog> = (args) => (
   <>
     <PrimaryButton
       text={'Open dialog'}

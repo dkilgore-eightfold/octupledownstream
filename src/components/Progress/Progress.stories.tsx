@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import Progress, { ProgressSize } from '.';
 import { Stack } from '../Stack';
 import { Tooltip, TooltipTheme } from '../Tooltip';
@@ -31,7 +31,7 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof Progress>;
 
-const Line_Story: ComponentStory<typeof Progress> = (args) => {
+const Line_Story: StoryFn<typeof Progress> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'s'} fullWidth>
       <Progress
@@ -60,7 +60,7 @@ const Line_Story: ComponentStory<typeof Progress> = (args) => {
   );
 };
 
-const Small_Line_Story: ComponentStory<typeof Progress> = (args) => {
+const Small_Line_Story: StoryFn<typeof Progress> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'s'} style={{ width: 200 }}>
       <Progress
@@ -97,7 +97,7 @@ const Small_Line_Story: ComponentStory<typeof Progress> = (args) => {
   );
 };
 
-const Circle_Story: ComponentStory<typeof Progress> = (args) => {
+const Circle_Story: StoryFn<typeof Progress> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'s'} fullWidth>
       <Progress {...args} type={'circle'} percent={75} />
@@ -107,7 +107,7 @@ const Circle_Story: ComponentStory<typeof Progress> = (args) => {
   );
 };
 
-const Small_Circle_Story: ComponentStory<typeof Progress> = (args) => {
+const Small_Circle_Story: StoryFn<typeof Progress> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'s'} style={{ width: 200 }}>
       <Progress
@@ -136,7 +136,7 @@ const Small_Circle_Story: ComponentStory<typeof Progress> = (args) => {
   );
 };
 
-const Dashboard_Story: ComponentStory<typeof Progress> = (args) => {
+const Dashboard_Story: StoryFn<typeof Progress> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'s'} style={{ width: 200 }}>
       <Progress {...args} type="dashboard" percent={75} />
@@ -145,7 +145,7 @@ const Dashboard_Story: ComponentStory<typeof Progress> = (args) => {
   );
 };
 
-const Line_Cap_Story: ComponentStory<typeof Progress> = (args) => {
+const Line_Cap_Story: StoryFn<typeof Progress> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'s'} style={{ width: 200 }}>
       <Progress {...args} strokeLinecap={'butt'} percent={75} />
@@ -160,7 +160,7 @@ const Line_Cap_Story: ComponentStory<typeof Progress> = (args) => {
   );
 };
 
-const Steps_Story: ComponentStory<typeof Progress> = (args) => {
+const Steps_Story: StoryFn<typeof Progress> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'l'} fullWidth>
       <Progress
@@ -193,7 +193,7 @@ const Steps_Story: ComponentStory<typeof Progress> = (args) => {
   );
 };
 
-const Success_Segment_Story: ComponentStory<typeof Progress> = (args) => {
+const Success_Segment_Story: StoryFn<typeof Progress> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'l'} fullWidth>
       <Tooltip
@@ -240,7 +240,7 @@ const Success_Segment_Story: ComponentStory<typeof Progress> = (args) => {
   );
 };
 
-const Gradient_Story: ComponentStory<typeof Progress> = (args) => {
+const Gradient_Story: StoryFn<typeof Progress> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'s'} fullWidth>
       <Progress

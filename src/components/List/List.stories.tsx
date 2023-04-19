@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { List } from './';
 
 export default {
@@ -53,15 +53,11 @@ const sampleList: User[] = [1, 2, 3, 4, 5].map((i) => ({
   img: '',
 }));
 
-const Vertical_Story: ComponentStory<typeof List> = (args) => (
-  <List {...args} />
-);
+const Vertical_Story: StoryFn<typeof List> = (args) => <List {...args} />;
 
 export const Vertical = Vertical_Story.bind({});
 
-const Horizontal_Story: ComponentStory<typeof List> = (args) => (
-  <List {...args} />
-);
+const Horizontal_Story: StoryFn<typeof List> = (args) => <List {...args} />;
 
 export const Horizontal = Horizontal_Story.bind({});
 

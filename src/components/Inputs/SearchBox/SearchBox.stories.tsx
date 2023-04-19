@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { IconName } from '../../Icon';
 import {
   SearchBox,
@@ -132,7 +132,7 @@ export default {
   },
 } as ComponentMeta<typeof SearchBox>;
 
-const Search_Box_Story: ComponentStory<typeof SearchBox> = (args) => (
+const Search_Box_Story: StoryFn<typeof SearchBox> = (args) => (
   <SearchBox {...args} />
 );
 

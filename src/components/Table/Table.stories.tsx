@@ -1,6 +1,6 @@
 import React, { Component, FC, useEffect, useRef, useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Link } from '../Link';
 import { Stack } from '../Stack';
 import { Avatar } from '../Avatar';
@@ -1182,11 +1182,11 @@ const rowSelection = {
   }),
 };
 
-const Table_Base_Story: ComponentStory<typeof Table> = (args) => {
+const Table_Base_Story: StoryFn<typeof Table> = (args) => {
   return <Table {...args} />;
 };
 
-const Table_Wrapped_Story: ComponentStory<typeof Table> = (args) => {
+const Table_Wrapped_Story: StoryFn<typeof Table> = (args) => {
   return (
     <div style={{ width: 900, height: 2000 }}>
       <Table {...args} />
@@ -1309,7 +1309,7 @@ const VirtualTable = (props: Parameters<typeof Table>[0]) => {
   );
 };
 
-const Page_Sizes_Story: ComponentStory<typeof Table> = (args) => {
+const Page_Sizes_Story: StoryFn<typeof Table> = (args) => {
   const n: any[] = [];
   const total = 1000;
 

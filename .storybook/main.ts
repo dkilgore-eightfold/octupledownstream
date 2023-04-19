@@ -1,8 +1,10 @@
-const webpackCommon = require('../webpack.common');
+import type { StorybookConfig } from '@storybook/react-vite';
+import { mergeConfig } from 'vite';
 
-module.exports = {
+const config: StorybookConfig = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
+    '@storybook/addon-coverage',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-links',
@@ -11,13 +13,12 @@ module.exports = {
     'storybook-addon-rtl',
   ],
   staticDirs: ['../public/assets'],
-  framework: '@storybook/react',
-  core: {
-    builder: 'webpack5',
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
   },
   typescript: {
     check: false,
-    checkOptions: {},
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
@@ -25,19 +26,15 @@ module.exports = {
         prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },
   },
-  webpackFinal: async (config, { configType }) => {
-    const webpackCommonConfig = webpackCommon(
-      {},
-      { mode: configType.toLowerCase() }
-    );
-    return {
-      ...config,
-      optimization: webpackCommonConfig.optimization,
-      plugins: [...config.plugins, ...webpackCommonConfig.plugins],
-      module: {
-        ...config.module,
-        rules: webpackCommonConfig.module.rules,
+  async viteFinal(config) {
+    // Merge custom configuration into the default config
+    return mergeConfig(config, {
+      // Add dependencies to pre-optimization
+      optimizeDeps: {
+        include: ['storybook-dark-mode'],
       },
-    };
+    });
   },
 };
+
+export default config;

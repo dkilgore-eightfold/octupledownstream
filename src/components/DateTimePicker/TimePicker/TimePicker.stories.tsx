@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import dayjs from 'dayjs';
 import type { Dayjs } from 'dayjs';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import TimePicker from './TimePicker';
 import { DatePickerShape, DatePickerSize } from '../DatePicker';
 import { Stack } from '../../Stack';
@@ -91,7 +91,7 @@ export default {
   },
 } as ComponentMeta<typeof TimePicker>;
 
-const Basic_Story: ComponentStory<typeof TimePicker> = (args) => {
+const Basic_Story: StoryFn<typeof TimePicker> = (args) => {
   const onChange = (time: Dayjs, timeString: string) => {
     console.log(time, timeString);
   };
@@ -105,7 +105,7 @@ const Basic_Story: ComponentStory<typeof TimePicker> = (args) => {
   );
 };
 
-const Disabled_Story: ComponentStory<typeof TimePicker> = (args) => {
+const Disabled_Story: StoryFn<typeof TimePicker> = (args) => {
   const onChange = (time: Dayjs, timeString: string) => {
     console.log(time, timeString);
   };
@@ -119,7 +119,7 @@ const Disabled_Story: ComponentStory<typeof TimePicker> = (args) => {
   );
 };
 
-const Controlled_Story: ComponentStory<typeof TimePicker> = (args) => {
+const Controlled_Story: StoryFn<typeof TimePicker> = (args) => {
   const [value, setValue] = useState<Dayjs | null>(null);
 
   const onChange = (time: Dayjs) => {
@@ -129,7 +129,7 @@ const Controlled_Story: ComponentStory<typeof TimePicker> = (args) => {
   return <TimePicker {...args} value={value} onChange={onChange} />;
 };
 
-const Hour_and_Minute_Story: ComponentStory<typeof TimePicker> = (args) => {
+const Hour_and_Minute_Story: StoryFn<typeof TimePicker> = (args) => {
   const format = 'HH:mm';
   return (
     <TimePicker
@@ -140,11 +140,11 @@ const Hour_and_Minute_Story: ComponentStory<typeof TimePicker> = (args) => {
   );
 };
 
-const Interval_Story: ComponentStory<typeof TimePicker> = (args) => {
+const Interval_Story: StoryFn<typeof TimePicker> = (args) => {
   return <TimePicker {...args} />;
 };
 
-const Extra_Footer_Story: ComponentStory<typeof TimePicker> = (args) => {
+const Extra_Footer_Story: StoryFn<typeof TimePicker> = (args) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -163,11 +163,11 @@ const Extra_Footer_Story: ComponentStory<typeof TimePicker> = (args) => {
   );
 };
 
-const Time_Range_Picker_Story: ComponentStory<typeof RangePicker> = (args) => {
+const Time_Range_Picker_Story: StoryFn<typeof RangePicker> = (args) => {
   return <TimePicker.RangePicker {...args} />;
 };
 
-const Single_Borderless_Story: ComponentStory<typeof TimePicker> = (args) => {
+const Single_Borderless_Story: StoryFn<typeof TimePicker> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'xxl'}>
       <TimePicker {...args} />
@@ -175,7 +175,7 @@ const Single_Borderless_Story: ComponentStory<typeof TimePicker> = (args) => {
   );
 };
 
-const Range_Borderless_Story: ComponentStory<typeof RangePicker> = (args) => {
+const Range_Borderless_Story: StoryFn<typeof RangePicker> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'xxl'}>
       <RangePicker {...args} />
@@ -183,7 +183,7 @@ const Range_Borderless_Story: ComponentStory<typeof RangePicker> = (args) => {
   );
 };
 
-const Single_Status_Story: ComponentStory<typeof TimePicker> = (args) => {
+const Single_Status_Story: StoryFn<typeof TimePicker> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'xxl'}>
       <TimePicker {...args} status={'error'} />
@@ -192,7 +192,7 @@ const Single_Status_Story: ComponentStory<typeof TimePicker> = (args) => {
   );
 };
 
-const Range_Status_Story: ComponentStory<typeof RangePicker> = (args) => {
+const Range_Status_Story: StoryFn<typeof RangePicker> = (args) => {
   return (
     <Stack direction={'vertical'} gap={'xxl'}>
       <TimePicker.RangePicker {...args} status={'error'} />

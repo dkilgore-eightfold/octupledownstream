@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { InlineSvg } from './';
 import { SkeletonVariant } from '../Skeleton/Skeleton.types';
 
@@ -31,7 +31,7 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof InlineSvg>;
 
-const InlineSvg_Story: ComponentStory<typeof InlineSvg> = (args) => (
+const InlineSvg_Story: StoryFn<typeof InlineSvg> = (args) => (
   <InlineSvg {...args} />
 );
 

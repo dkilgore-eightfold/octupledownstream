@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Modal, ModalSize } from './';
 import { DefaultButton, PrimaryButton } from '../Button';
 import { IconName } from '../Icon';
@@ -82,7 +82,7 @@ export default {
   },
 } as ComponentMeta<typeof Modal>;
 
-const Small_Story: ComponentStory<typeof Modal> = (args) => {
+const Small_Story: StoryFn<typeof Modal> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -94,7 +94,7 @@ const Small_Story: ComponentStory<typeof Modal> = (args) => {
 
 export const Small = Small_Story.bind({});
 
-const Medium_Story: ComponentStory<typeof Modal> = (args) => {
+const Medium_Story: StoryFn<typeof Modal> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -106,7 +106,7 @@ const Medium_Story: ComponentStory<typeof Modal> = (args) => {
 
 export const Medium = Medium_Story.bind({});
 
-const Large_Story: ComponentStory<typeof Modal> = (args) => {
+const Large_Story: StoryFn<typeof Modal> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -118,7 +118,7 @@ const Large_Story: ComponentStory<typeof Modal> = (args) => {
 
 export const Large = Large_Story.bind({});
 
-const XLarge_Story: ComponentStory<typeof Modal> = (args) => {
+const XLarge_Story: StoryFn<typeof Modal> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -130,7 +130,7 @@ const XLarge_Story: ComponentStory<typeof Modal> = (args) => {
 
 export const XLarge = XLarge_Story.bind({});
 
-const Fullscreen_Story: ComponentStory<typeof Modal> = (args) => {
+const Fullscreen_Story: StoryFn<typeof Modal> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -142,7 +142,7 @@ const Fullscreen_Story: ComponentStory<typeof Modal> = (args) => {
 
 export const Fullscreen = Fullscreen_Story.bind({});
 
-const Scrollable_Story: ComponentStory<typeof Modal> = (args) => {
+const Scrollable_Story: StoryFn<typeof Modal> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>
@@ -164,7 +164,7 @@ const Scrollable_Story: ComponentStory<typeof Modal> = (args) => {
 
 export const Scrollable = Scrollable_Story.bind({});
 
-const Header_Actions_Story: ComponentStory<typeof Modal> = (args) => {
+const Header_Actions_Story: StoryFn<typeof Modal> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { ButtonSize, PrimaryButton } from '../Button';
 import { Icon, IconName, IconSize } from '../Icon';
 import { Link } from '../Link';
@@ -76,7 +76,7 @@ export default {
   },
 } as ComponentMeta<typeof Popup>;
 
-const Popup_Story: ComponentStory<typeof Popup> = (args) => {
+const Popup_Story: StoryFn<typeof Popup> = (args) => {
   const [visible, setVisibility] = useState(false);
   return (
     <Popup {...args} onVisibleChange={(isVisible) => setVisibility(isVisible)}>

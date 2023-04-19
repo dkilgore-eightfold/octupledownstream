@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
 import { action } from '@storybook/addon-actions';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, StoryFn } from '@storybook/react';
 import { Avatar, AvatarGroup, AvatarGroupVariant, AvatarPopupProps } from '.';
 import { TooltipSize, TooltipTheme } from '../Tooltip';
 
@@ -70,7 +70,7 @@ const sampleList: User[] = [
   randomiseTheme: true,
 }));
 
-const Basic_Story: ComponentStory<typeof AvatarGroup> = (args) => (
+const Basic_Story: StoryFn<typeof AvatarGroup> = (args) => (
   <AvatarGroup
     {...args}
     animateOnHover
@@ -202,7 +202,7 @@ export const Basic = Basic_Story.bind({});
 
 export const Basic_Spaced = Basic_Story.bind({});
 
-const List_Story: ComponentStory<typeof AvatarGroup> = (args) => (
+const List_Story: StoryFn<typeof AvatarGroup> = (args) => (
   <AvatarGroup
     {...args}
     animateOnHover

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { Badge } from './';
 
 export default {
@@ -28,19 +28,17 @@ export default {
   },
 } as ComponentMeta<typeof Badge>;
 
-const Badge_Default_Story: ComponentStory<typeof Badge> = (args) => (
+const Badge_Default_Story: StoryFn<typeof Badge> = (args) => (
   <Badge {...args} />
 );
 
 export const Badge_Default = Badge_Default_Story.bind({});
 
-const Badge_Active_Story: ComponentStory<typeof Badge> = (args) => (
-  <Badge {...args} />
-);
+const Badge_Active_Story: StoryFn<typeof Badge> = (args) => <Badge {...args} />;
 
 export const Badge_Active = Badge_Active_Story.bind({});
 
-const Badge_Disruptive_Story: ComponentStory<typeof Badge> = (args) => (
+const Badge_Disruptive_Story: StoryFn<typeof Badge> = (args) => (
   <Badge {...args} />
 );
 

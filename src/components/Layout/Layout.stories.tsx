@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import Layout from './';
 import { Navbar, NavbarContent } from '../Navbar';
 import { Icon, IconName } from '../Icon';
@@ -94,7 +94,7 @@ const getNavBar = (): JSX.Element => (
   </Navbar>
 );
 
-const Basic_Story: ComponentStory<typeof Layout> = (args) => (
+const Basic_Story: StoryFn<typeof Layout> = (args) => (
   <Stack direction="vertical" gap="xxxl" justify="center" fullWidth>
     <Layout {...args}>
       <Nav>{getNavBar()}</Nav>
@@ -226,7 +226,7 @@ const Basic_Story: ComponentStory<typeof Layout> = (args) => (
 
 export const Basic = Basic_Story.bind({});
 
-const Fixed_Navbar_Story: ComponentStory<typeof Layout> = (args) => (
+const Fixed_Navbar_Story: StoryFn<typeof Layout> = (args) => (
   <Layout {...args} style={{ height: '294px' }}>
     <Nav
       style={{
@@ -276,7 +276,7 @@ const Fixed_Navbar_Story: ComponentStory<typeof Layout> = (args) => (
 
 export const Fixed_Navbar = Fixed_Navbar_Story.bind({});
 
-const Fixed_Aside_Story: ComponentStory<typeof Layout> = (args) => (
+const Fixed_Aside_Story: StoryFn<typeof Layout> = (args) => (
   <Layout {...args}>
     <Aside
       style={{
@@ -469,7 +469,7 @@ const Fixed_Aside_Story: ComponentStory<typeof Layout> = (args) => (
 
 export const Fixed_Aside = Fixed_Aside_Story.bind({});
 
-const Responsive_Story: ComponentStory<typeof Layout> = (args) => (
+const Responsive_Story: StoryFn<typeof Layout> = (args) => (
   <Layout {...args}>
     <Aside
       breakpoint="lg"
@@ -513,7 +513,7 @@ const Responsive_Story: ComponentStory<typeof Layout> = (args) => (
 
 export const Responsive = Responsive_Story.bind({});
 
-const Trigger_Story: ComponentStory<typeof Layout> = (args) => {
+const Trigger_Story: StoryFn<typeof Layout> = (args) => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (

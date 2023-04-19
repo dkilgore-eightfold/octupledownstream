@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, ComponentMeta } from '@storybook/react';
 import { MatchScore } from './index';
 
 export default {
@@ -52,7 +52,7 @@ export default {
   },
 } as ComponentMeta<typeof MatchScore>;
 
-const Default_Story: ComponentStory<typeof MatchScore> = (args) => (
+const Default_Story: StoryFn<typeof MatchScore> = (args) => (
   <MatchScore {...args} />
 );
 

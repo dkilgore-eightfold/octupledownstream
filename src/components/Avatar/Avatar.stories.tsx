@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, StoryFn } from '@storybook/react';
 import { IconName } from '../Icon';
 import {
   Avatar,
@@ -47,43 +47,43 @@ const imageProps = {
   alt: 'random profile image',
 };
 
-const Avatar_Default_Story: ComponentStory<typeof Avatar> = (args) => (
+const Avatar_Default_Story: StoryFn<typeof Avatar> = (args) => (
   <Avatar {...args} />
 );
 
 export const Avatar_Default = Avatar_Default_Story.bind({});
 
-const Avatar_Icon_Story: ComponentStory<typeof Avatar> = (args) => (
+const Avatar_Icon_Story: StoryFn<typeof Avatar> = (args) => (
   <Avatar {...args} />
 );
 
 export const Avatar_Icon = Avatar_Icon_Story.bind({});
 
-const Avatar_Round_Story: ComponentStory<typeof Avatar> = (args) => (
+const Avatar_Round_Story: StoryFn<typeof Avatar> = (args) => (
   <Avatar popupProps={{ content: 'A popup' }} {...args} />
 );
 
 export const Avatar_Round = Avatar_Round_Story.bind({});
 
-const Avatar_Round_Icon_Story: ComponentStory<typeof Avatar> = (args) => (
+const Avatar_Round_Icon_Story: StoryFn<typeof Avatar> = (args) => (
   <Avatar {...args} />
 );
 
 export const Avatar_Round_Icon = Avatar_Round_Icon_Story.bind({});
 
-const Avatar_Fallback_Theme_Story: ComponentStory<typeof Avatar> = (args) => (
+const Avatar_Fallback_Theme_Story: StoryFn<typeof Avatar> = (args) => (
   <Avatar {...args} theme="green" />
 );
 
 export const Avatar_Fallback_Theme = Avatar_Fallback_Theme_Story.bind({});
 
-const Avatar_Fallback_Hashing_Story: ComponentStory<typeof Avatar> = (args) => (
+const Avatar_Fallback_Hashing_Story: StoryFn<typeof Avatar> = (args) => (
   <Avatar {...args} hashingFunction={() => 3} />
 );
 
 export const Avatar_Fallback_Hashing = Avatar_Fallback_Hashing_Story.bind({});
 
-const Avatar_StatusItem_Story: ComponentStory<typeof Avatar> = (args) => {
+const Avatar_StatusItem_Story: StoryFn<typeof Avatar> = (args) => {
   const avatarSize = 100;
   const [statusItemSize] = getStatusItemSizeAndPadding(avatarSize);
   args.size = `${avatarSize}px`;
@@ -234,7 +234,7 @@ const Avatar_StatusItem_Story: ComponentStory<typeof Avatar> = (args) => {
 
 export const Avatar_StatusItem = Avatar_StatusItem_Story.bind({});
 
-const Avatar_Tooltip_Story: ComponentStory<typeof Avatar> = (args) => (
+const Avatar_Tooltip_Story: StoryFn<typeof Avatar> = (args) => (
   <Avatar {...args} theme="red" />
 );
 

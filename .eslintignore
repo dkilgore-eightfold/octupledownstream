@@ -8,9 +8,7 @@ scripts
 
 tsconfig.json
 yarn.lock
-webpack.common.js
-webpack.dev.js
-webpack.prod.js
+vite.config.js
 MANIFEST.txt
 npm-debug.log*
 yarn-debug.log*
