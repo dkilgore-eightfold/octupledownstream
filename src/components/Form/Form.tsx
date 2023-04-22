@@ -4,7 +4,7 @@ import OcFieldForm, { OcList, useWatch } from './Internal';
 import type { OcValidateErrorEntity } from './Internal/OcForm.types';
 import { FormContext } from './Context';
 import type { FormContextProps } from './Context';
-import useForm, { FormInstance } from './Hooks/useForm';
+import useForm, { type FormInstance } from './Hooks/useForm';
 import DisabledContext, {
   DisabledContextProvider,
 } from '../ConfigProvider/DisabledContext';

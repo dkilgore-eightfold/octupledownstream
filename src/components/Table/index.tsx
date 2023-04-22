@@ -1,17 +1,17 @@
-import Table, { TablePaginationConfig } from './Table';
+import Table, { type TablePaginationConfig } from './Table';
 
-export { ColumnProps } from './Internal/Column';
-export {
-  ColumnsType,
-  ColumnType,
+export type { ColumnProps } from './Internal/Column';
+export { TableSize } from './Table.types';
+export type {
   ColumnGroupType,
+  ColumnType,
+  ColumnsType,
   ExpandableConfig,
   FilterConfirmProps,
   FilterValue,
   SorterResult,
   TableProps,
   TableRowSelection,
-  TableSize,
 } from './Table.types';
 export { TablePaginationConfig };
 

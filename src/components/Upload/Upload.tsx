@@ -10,7 +10,7 @@ import {
   UploadLocale,
   UploadSize,
 } from './Upload.types';
-import { UploadProps } from './Upload.types';
+import type { UploadProps } from './Upload.types';
 import UploadList from './UploadList';
 import { Icon, IconName } from '../Icon';
 import { PrimaryButton } from '../Button';

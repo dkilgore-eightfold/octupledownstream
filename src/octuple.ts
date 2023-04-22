@@ -42,21 +42,19 @@ import {
   SelectorSize,
 } from './components/CheckBox';
 
-import {
-  ConfigProvider,
-  OcThemeName,
-  Shape,
-  Size,
-} from './components/ConfigProvider';
+import { ConfigProvider, Shape, Size } from './components/ConfigProvider';
+import type { OcThemeName } from './components/ConfigProvider';
 
 import Cropper from './components/Upload/Cropper';
 
 import DatePicker from './components/DateTimePicker/DatePicker';
 
 import {
-  DatePickerProps,
   DatePickerShape,
   DatePickerSize,
+} from './components/DateTimePicker/DatePicker';
+import type {
+  DatePickerProps,
   RangePickerProps,
 } from './components/DateTimePicker/DatePicker';
 
@@ -66,13 +64,15 @@ import { Dropdown } from './components/Dropdown';
 
 import { Empty, EmptyMode } from './components/Empty';
 
-import Form, { FormInstance } from './components/Form';
+import Form from './components/Form';
+import type { FormInstance } from './components/Form';
 
 import Grid, { Col, Row } from './components/Grid';
 
 import { Icon, IconName, IconSize } from './components/Icon';
 
-import { InlineSvgProps, InlineSvg } from './components/InlineSvg';
+import type { InlineSvgProps } from './components/InlineSvg';
+import { InlineSvg } from './components/InlineSvg';
 
 import { Label, LabelSize } from './components/Label';
 
@@ -105,13 +105,8 @@ import {
 
 import { PersistentBar, PersistentBarType } from './components/PersistentBar';
 
-import {
-  Pill,
-  PillIconAlign,
-  PillSize,
-  PillThemeName,
-  PillType,
-} from './components/Pills';
+import { Pill, PillIconAlign, PillSize, PillType } from './components/Pills';
+import type { PillThemeName } from './components/Pills';
 
 import {
   SearchBox,
@@ -135,12 +130,8 @@ import {
 
 import { Select, SelectShape, SelectSize } from './components/Select';
 
-import {
-  Slider,
-  SliderMarks,
-  SliderSize,
-  SliderTrackStatus,
-} from './components/Slider';
+import { Slider, SliderSize, SliderTrackStatus } from './components/Slider';
+import type { SliderMarks } from './components/Slider';
 
 import { SnackbarContainer, Snackbar, snack } from './components/Snackbar';
 
@@ -148,25 +139,20 @@ import { Spinner, SpinnerSize } from './components/Spinner';
 
 import { Stack } from './components/Stack';
 
-import {
-  Stat,
-  StatThemeName,
-  StatValidationStatus,
-  Tabs,
-  Tab,
-  TabSize,
-  TabVariant,
-} from './components/Tabs';
+import { Stat, Tabs, Tab, TabSize, TabVariant } from './components/Tabs';
+import type { StatThemeName, StatValidationStatus } from './components/Tabs';
 
 import {
-  Step,
   StepSize,
   Stepper,
   StepperLineStyle,
   StepperSize,
+  StepperVariant,
+} from './components/Stepper';
+import type {
+  Step,
   StepperThemeName,
   StepperValidationStatus,
-  StepperVariant,
 } from './components/Stepper';
 
 import TimePicker from './components/DateTimePicker/TimePicker/TimePicker';
@@ -177,12 +163,8 @@ import { Loader, LoaderSize } from './components/Loader';
 
 import { MatchScore } from './components/MatchScore';
 
-import {
-  Panel,
-  PanelPlacement,
-  PanelSize,
-  PanelHeader,
-} from './components/Panel';
+import { Panel, PanelSize, PanelHeader } from './components/Panel';
+import type { PanelPlacement } from './components/Panel';
 
 import { Popup, PopupSize, PopupTheme } from './components/Popup';
 
@@ -190,7 +172,8 @@ import { Portal } from './components/Portal';
 
 import { RadioButton, RadioGroup } from './components/RadioButton';
 
-import Table, {
+import Table, { TableSize } from './components/Table/';
+import type {
   ColumnGroupType,
   ColumnType,
   ColumnsType,
@@ -201,15 +184,14 @@ import Table, {
   TablePaginationConfig,
   TableProps,
   TableRowSelection,
-  TableSize,
 } from './components/Table/';
 
-import Upload, {
+import Upload, { UploadSize } from './components/Upload';
+import type {
   OcFile,
   UploadFile,
   UploadFileStatus,
   UploadProps,
-  UploadSize,
 } from './components/Upload';
 
 import { ResizeObserver } from './shared/ResizeObserver/ResizeObserver';

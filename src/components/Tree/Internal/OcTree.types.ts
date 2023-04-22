@@ -11,7 +11,7 @@ export const MAX_RETRY_TIMES: number = 10;
 export const TREE_NODE_ICON_OPEN: string = 'open';
 export const TREE_NODE_ICON_CLOSE: string = 'close';
 
-export { ScrollTo } from '../../VirtualList/VirtualList.types';
+export type { ScrollTo } from '../../VirtualList/VirtualList.types';
 
 export interface TreeNodeProps<TreeDataType extends BasicDataNode = DataNode> {
   eventKey?: Key; // Pass by parent `cloneElement`

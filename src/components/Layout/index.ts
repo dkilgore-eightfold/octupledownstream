@@ -8,7 +8,7 @@ import InternalLayout, {
 } from './Layout';
 import { Aside } from './Aside';
 
-export { AsideProps, BasicProps as LayoutProps } from './Layout.types';
+export type { AsideProps, BasicProps as LayoutProps } from './Layout.types';
 
 type InternalLayoutType = typeof InternalLayout;
 

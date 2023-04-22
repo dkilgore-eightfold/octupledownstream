@@ -1,8 +1,8 @@
 import Tree from './Tree';
 
-export { EventDataNode, DataNode } from './Internal/OcTree.types';
+export type { EventDataNode, DataNode } from './Internal/OcTree.types';
 
-export {
+export type {
   TreeProps,
   OcTreeNode,
   OcTreeNodeMouseEvent,
@@ -13,7 +13,7 @@ export {
   OcTreeNodeProps,
 } from './Tree.types';
 
-export {
+export type {
   ExpandAction as DirectoryTreeExpandAction,
   DirectoryTreeProps,
 } from './DirectoryTree';

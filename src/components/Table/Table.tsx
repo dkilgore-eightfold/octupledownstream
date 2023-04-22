@@ -24,6 +24,7 @@ import type {
   ChangeEventInfo,
   ColumnGroupType,
   ColumnType,
+  ColumnsType,
   ExpandableConfig,
   ExpandType,
   FilterValue,
@@ -31,14 +32,10 @@ import type {
   SorterResult,
   TableAction,
   TableLocale,
+  TablePaginationConfig,
   TableProps,
 } from './Table.types';
-import {
-  EMPTY_LIST,
-  ColumnsType,
-  TablePaginationConfig,
-  TableSize,
-} from './Table.types';
+import { EMPTY_LIST, TableSize } from './Table.types';
 import useSelection, {
   SELECTION_ALL,
   SELECTION_COLUMN,

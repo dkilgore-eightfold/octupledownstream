@@ -1,20 +1,20 @@
-import {
+import type {
   OcRule as Rule,
   OcRuleObject as RuleObject,
   OcRuleRender as RuleRender,
 } from './Internal/OcForm.types';
 import { FormProvider } from './Context';
-import ErrorList, { ErrorListProps } from './ErrorList';
-import InternalForm, { FormInstance, useForm, useWatch } from './Form';
+import ErrorList, { type ErrorListProps } from './ErrorList';
+import type { FormInstance } from './Form';
+import InternalForm, { useForm, useWatch } from './Form';
 import Item from './FormItem';
 import List from './FormList';
-import {
-  FormItemProps,
-  FormProps,
+import type {
   FormListFieldData,
   FormListOperation,
   FormListProps,
 } from './Form.types';
+import type { FormItemProps, FormProps } from './Form.types';
 import useFormInstance from './Hooks/useFormInstance';
 
 type InternalFormType = typeof InternalForm;

@@ -90,7 +90,7 @@ const FixedHolder = forwardRef<HTMLDivElement, FixedHeaderProps<unknown>>(
 
     // Check if all flattenColumns has width
     const allFlattenColumnsWithWidth: boolean = useMemo(
-      () => flattenColumns.every((column) => column.width >= 0),
+      () => flattenColumns.every((column) => Number(column.width) >= 0),
       [flattenColumns]
     );
 

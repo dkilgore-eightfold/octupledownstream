@@ -6,7 +6,7 @@ function useBreakpoint() {
   return useInternalBreakpoint();
 }
 
-export { ColProps, ColSize, RowProps } from './Grid.types';
+export type { ColProps, ColSize, RowProps } from './Grid.types';
 
 export { Row, Col };
 

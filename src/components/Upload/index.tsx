@@ -2,15 +2,15 @@ import Dropzone from './Dropzone';
 import type { UploadProps } from './Upload';
 import InternalUpload, { LIST_IGNORE } from './Upload';
 
-export { DropzoneProps } from './Dropzone';
-export {
+export type { DropzoneProps } from './Dropzone';
+export { UploadSize } from './Upload.types';
+export type {
   OcFile,
   UploadChangeParam,
   UploadFile,
   UploadFileStatus,
   UploadListProps,
   UploadProps,
-  UploadSize,
 } from './Upload.types';
 
 type InternalUploadType = typeof InternalUpload;

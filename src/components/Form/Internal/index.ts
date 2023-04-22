@@ -1,6 +1,5 @@
 import React from 'react';
-import type { OcFormProps } from './OcForm.types';
-import { OcFormInstance } from './OcForm.types';
+import type { OcFormInstance, OcFormProps } from './OcForm.types';
 import OcField from './OcField';
 import { OcList } from './OcList';
 import { OcForm } from './OcForm';

@@ -17,8 +17,12 @@ import {
 import Popup from './Popup/Popup';
 import type { PopupInnerRef } from './Popup/Popup.types';
 import TriggerContext from './context';
-import type { CommonEventHandler, Point } from './Trigger.types';
-import { BuildInPlacements, TriggerProps } from './Trigger.types';
+import type {
+  BuildInPlacements,
+  CommonEventHandler,
+  Point,
+} from './Trigger.types';
+import { TriggerProps } from './Trigger.types';
 import type { AlignType } from '../Align/Align.types';
 
 function noop() {}

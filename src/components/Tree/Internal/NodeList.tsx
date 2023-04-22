@@ -1,12 +1,7 @@
 import React from 'react';
 import VirtualList, { ListRef } from '../../VirtualList';
-import {
-  FlattenNode,
-  Key,
-  DataEntity,
-  DataNode,
-  ScrollTo,
-} from './OcTree.types';
+import { FlattenNode, Key, DataEntity, DataNode } from './OcTree.types';
+import type { ScrollTo } from './OcTree.types';
 import MotionTreeNode from './MotionTreeNode';
 import { findExpandedKeys, getExpandRange } from './utils/diffUtil';
 import { getTreeNodeProps, getKey } from './utils/treeUtil';

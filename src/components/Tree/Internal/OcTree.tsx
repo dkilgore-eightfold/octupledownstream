@@ -28,9 +28,9 @@ import {
   FlattenNode,
   EventDataNode,
   NodeInstance,
-  ScrollTo,
   BasicDataNode,
 } from './OcTree.types';
+import type { ScrollTo } from './OcTree.types';
 import {
   flattenTreeData,
   convertTreeToData,
