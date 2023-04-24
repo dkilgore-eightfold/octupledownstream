@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-- **avatar group:** avatar group count, maxProps fixes ([#604](https://github.com/EightfoldAI/octuple/issues/604)) ([9bfa3f0](https://github.com/EightfoldAI/octuple/commits/9bfa3f0a21b25d98fd9a512febd16046074ac0a9))
+- avatar group: avatar group count maxProps fixes ([#604](https://github.com/EightfoldAI/octuple/issues/604)) ([9bfa3f0](https://github.com/EightfoldAI/octuple/commits/9bfa3f0a21b25d98fd9a512febd16046074ac0a9))
 
 ### [2.35.1](https://github.com/EightfoldAI/octuple/compare/v2.35.0...v2.35.1) (2023-04-17)
 
@@ -142,7 +142,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 - add secondary button in menu item ([#540](https://github.com/EightfoldAI/octuple/issues/540)) ([e75f047](https://github.com/EightfoldAI/octuple/commits/e75f0476810a6246f302b94396060cc333ab8f58))
 - link: adds variants with var theme styles and improves api ([#535](https://github.com/EightfoldAI/octuple/issues/535)) ([9539e78](https://github.com/EightfoldAI/octuple/commits/9539e78d7fd33cd0f24fd82264b26ee5717ccbbc))
-- slider: enable basic data comparison slider implementations ([#529](https://github.com/EightfoldAI/octuple/issues/529)) ([7c6bae2](https://github.com/EightfoldAI/octuple/commits/7c6bae277bc7d3e2302122bb4b6c78be218d1dfd))
+- slider: enable basic data comparison slider implementations ([#529](https://github.com/EightfoldAI/octuple/issues/529)) ([7c6bae2](https://github.com/EightfoldAI/octuple/commits/7c6bae277bc7d3e2302122bb4b6c78be218d1dfd))
 
 ### Bug Fixes
 
@@ -375,7 +375,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-- slider: fixes collision detection in grid layouts ([#429](https://github.com/EightfoldAI/octuple/issues/429)) ([5981e55](https://github.com/EightfoldAI/octuple/commits/5981e55d10438a4edad619816fe38eca18f74e5a))
+- slider: fixes collision detection in grid layouts ([#429](https://github.com/EightfoldAI/octuple/issues/429)) ([5981e55](https://github.com/EightfoldAI/octuple/commits/5981e55d10438a4edad619816fe38eca18f74e5a))
 
 ## [2.18.0](https://github.com/EightfoldAI/octuple/compare/v2.17.1...v2.18.0) (2022-10-27)
 
