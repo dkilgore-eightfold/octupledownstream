@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { IconName } from '../Icon';
 import {
   Avatar,
@@ -40,7 +40,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof Avatar>;
+} as Meta<typeof Avatar>;
 
 const imageProps = {
   src: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg',

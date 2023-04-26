@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import dayjs from 'dayjs';
 import type { Dayjs } from 'dayjs';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import TimePicker from './TimePicker';
 import { DatePickerShape, DatePickerSize } from '../DatePicker';
 import { Stack } from '../../Stack';
@@ -89,7 +89,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof TimePicker>;
+} as Meta<typeof TimePicker>;
 
 const Basic_Story: StoryFn<typeof TimePicker> = (args) => {
   const onChange = (time: Dayjs, timeString: string) => {

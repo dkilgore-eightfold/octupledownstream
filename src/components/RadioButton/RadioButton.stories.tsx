@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Label } from '../Label';
 import { RadioButton, RadioButtonValue, RadioGroup } from './';
 import { LabelAlign, LabelPosition, SelectorSize } from '../CheckBox';
@@ -113,7 +113,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof RadioButton>;
+} as Meta<typeof RadioButton>;
 
 const RadioButton_Story: StoryFn<typeof RadioButton> = (args) => {
   const [selected, setSelected] = useState<RadioButtonValue>('label1');

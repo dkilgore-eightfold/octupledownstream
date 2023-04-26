@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import {
   CheckBox,
   CheckBoxGroup,
@@ -100,7 +100,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof CheckBox>;
+} as Meta<typeof CheckBox>;
 
 const CheckBox_Story: StoryFn<typeof CheckBox> = (args) => (
   <CheckBox checked={true} {...args} />

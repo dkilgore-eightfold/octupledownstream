@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Modal, ModalSize } from './';
 import { DefaultButton, PrimaryButton } from '../Button';
 import { IconName } from '../Icon';
@@ -80,7 +80,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof Modal>;
+} as Meta<typeof Modal>;
 
 const Small_Story: StoryFn<typeof Modal> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);

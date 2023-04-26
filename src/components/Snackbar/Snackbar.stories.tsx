@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { snack, Snackbar, SnackbarContainer } from './';
 import { ButtonSize, DefaultButton } from '../Button';
 import { InfoBarType } from '../InfoBar';
@@ -53,7 +53,7 @@ export default {
       control: { type: 'select' },
     },
   },
-} as ComponentMeta<typeof Snackbar>;
+} as Meta<typeof Snackbar>;
 
 const Default_Story: StoryFn<typeof Snackbar> = (args) => (
   <>

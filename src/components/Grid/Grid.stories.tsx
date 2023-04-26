@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import Grid, { Col, Row } from './';
 import { Pill } from '../Pills';
 import { Stack } from '../Stack';
@@ -36,7 +36,7 @@ export default {
     },
   },
   subcomponents: { Col },
-} as ComponentMeta<typeof Row>;
+} as Meta<typeof Row>;
 
 const Basic_Story: StoryFn<typeof Row> = (args) => (
   <div style={{ border: '1px solid var(--primary-color-70)' }}>

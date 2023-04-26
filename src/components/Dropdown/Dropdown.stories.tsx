@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import {
   ButtonIconAlign,
   ButtonTextAlign,
@@ -98,7 +98,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof Dropdown>;
+} as Meta<typeof Dropdown>;
 
 interface User {
   name: string;

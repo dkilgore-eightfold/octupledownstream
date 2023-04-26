@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Stat, StatThemeName, Tabs, TabSize, TabVariant } from './';
 import type { StatValidationStatus } from './';
 import { IconName } from '../Icon';
@@ -68,7 +68,7 @@ export default {
       control: { type: 'select' },
     },
   },
-} as ComponentMeta<typeof Tabs>;
+} as Meta<typeof Tabs>;
 
 const themes: StatThemeName[] = [
   'red',

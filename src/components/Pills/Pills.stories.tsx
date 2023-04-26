@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Pill, PillIconAlign, PillSize, PillThemeName, PillType } from './';
 import { IconName } from '../Icon';
 import { Stack } from '../Stack';
@@ -52,7 +52,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof Pill>;
+} as Meta<typeof Pill>;
 
 const themes: PillThemeName[] = [
   'red',

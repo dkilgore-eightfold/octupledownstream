@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { InfoBar, InfoBarType } from './';
 import { IconName } from '../Icon';
 
@@ -29,7 +29,7 @@ export default {
       ),
     },
   },
-} as ComponentMeta<typeof InfoBar>;
+} as Meta<typeof InfoBar>;
 
 const Neutral_Story: StoryFn<typeof InfoBar> = (args) => <InfoBar {...args} />;
 

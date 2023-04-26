@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import {
   BaseButton,
   ButtonShape,
@@ -60,7 +60,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof BaseButton>;
+} as Meta<typeof BaseButton>;
 
 const Two_State_Button_Story: StoryFn<typeof TwoStateButton> = (args) => (
   <TwoStateButton {...args} />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { IconName } from '../../Icon';
 import {
   TextInput,
@@ -120,7 +120,7 @@ export default {
       control: { type: 'text' },
     },
   },
-} as ComponentMeta<typeof TextInput>;
+} as Meta<typeof TextInput>;
 
 const Text_Input_Story: StoryFn<typeof TextInput> = (args) => {
   const [val, setVal] = useState(args.value);

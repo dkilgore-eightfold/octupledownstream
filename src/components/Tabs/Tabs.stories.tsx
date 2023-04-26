@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Tabs, Tab, TabSize, TabVariant } from './';
 import { IconName } from '../Icon';
 
@@ -45,7 +45,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof Tabs>;
+} as Meta<typeof Tabs>;
 
 const tabs = [1, 2, 3, 4].map((i) => ({
   value: `tab${i}`,

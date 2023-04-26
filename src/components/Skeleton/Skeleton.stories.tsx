@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Skeleton } from './Skeleton';
 import {
   SkeletonAnimation,
@@ -44,7 +44,7 @@ export default {
       control: { type: 'select' },
     },
   },
-} as ComponentMeta<typeof Skeleton>;
+} as Meta<typeof Skeleton>;
 
 const Default_Story: StoryFn<typeof Skeleton> = (args) => (
   <Skeleton {...args} />

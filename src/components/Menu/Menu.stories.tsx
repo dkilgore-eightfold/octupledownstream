@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import {
   Menu,
   MenuItemIconAlign,
@@ -55,7 +55,7 @@ export default {
       action: 'click',
     },
   },
-} as ComponentMeta<typeof Menu>;
+} as Meta<typeof Menu>;
 
 const BasicOverlay = (args: any) => (
   <Menu

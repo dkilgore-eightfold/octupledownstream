@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import Progress, { ProgressSize } from '.';
 import { Stack } from '../Stack';
 import { Tooltip, TooltipTheme } from '../Tooltip';
@@ -29,7 +29,7 @@ export default {
     },
   },
   argTypes: {},
-} as ComponentMeta<typeof Progress>;
+} as Meta<typeof Progress>;
 
 const Line_Story: StoryFn<typeof Progress> = (args) => {
   return (

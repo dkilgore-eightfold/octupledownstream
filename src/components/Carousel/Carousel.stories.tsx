@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Carousel, Slide } from './';
 
 export default {
@@ -34,7 +34,7 @@ export default {
     },
   },
   argTypes: {},
-} as ComponentMeta<typeof Carousel>;
+} as Meta<typeof Carousel>;
 
 const Slide_Story: StoryFn<typeof Carousel> = (args) => (
   <Carousel {...args}>

@@ -1,5 +1,5 @@
 import React, { FC, useState, useRef } from 'react';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { IconName } from '../Icon';
 import { Select } from './';
 import {
@@ -101,7 +101,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof Select>;
+} as Meta<typeof Select>;
 
 const Wrapper: FC<SelectProps> = ({ children }) => {
   return <div style={{ marginTop: 80 }}>{children}</div>;

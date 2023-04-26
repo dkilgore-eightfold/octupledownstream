@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Label, LabelSize } from './index';
 import { ButtonShape } from '../Button';
 
@@ -59,7 +59,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof Label>;
+} as Meta<typeof Label>;
 
 const Label_Story: StoryFn<typeof Label> = (args) => <Label {...args} />;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Badge } from './';
 
 export default {
@@ -26,7 +26,7 @@ export default {
       ),
     },
   },
-} as ComponentMeta<typeof Badge>;
+} as Meta<typeof Badge>;
 
 const Badge_Default_Story: StoryFn<typeof Badge> = (args) => (
   <Badge {...args} />

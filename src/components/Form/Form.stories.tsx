@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import Form from './';
 import type { FormInstance } from './';
 import { CheckBox } from '../CheckBox';
@@ -64,7 +64,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof Form>;
+} as Meta<typeof Form>;
 
 const Basic_Story: StoryFn<typeof Form> = (args) => {
   const onFinish = (values: any) => {

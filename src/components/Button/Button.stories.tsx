@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import {
   BaseButton,
   ButtonIconAlign,
@@ -159,7 +159,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof BaseButton>;
+} as Meta<typeof BaseButton>;
 
 const Primary_Button_Story: StoryFn<typeof PrimaryButton> = (args) => (
   <PrimaryButton {...args} />

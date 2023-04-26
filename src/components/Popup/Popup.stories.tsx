@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { ButtonSize, PrimaryButton } from '../Button';
 import { Icon, IconName, IconSize } from '../Icon';
 import { Link } from '../Link';
@@ -74,7 +74,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof Popup>;
+} as Meta<typeof Popup>;
 
 const Popup_Story: StoryFn<typeof Popup> = (args) => {
   const [visible, setVisibility] = useState(false);

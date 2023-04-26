@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Panel, PanelSize } from './';
 import { PanelHeader } from './PanelHeader';
 import { IconName } from '../Icon';
@@ -101,7 +101,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof Panel>;
+} as Meta<typeof Panel>;
 
 const Small_Story: StoryFn<typeof Panel> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);

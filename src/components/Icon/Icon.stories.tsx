@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { ConfigProvider } from '../ConfigProvider';
 import { Icon, IconName, IconSize } from './index';
 import iconSet from './selection.json';
@@ -86,7 +86,7 @@ export default {
       control: { type: 'select' },
     },
   },
-} as ComponentMeta<typeof Icon>;
+} as Meta<typeof Icon>;
 
 const Basic_Story: StoryFn<typeof Icon> = (args) => <Icon {...args} />;
 

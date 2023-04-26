@@ -1,6 +1,6 @@
 import React, { Component, FC, useEffect, useRef, useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Link } from '../Link';
 import { Stack } from '../Stack';
 import { Avatar } from '../Avatar';
@@ -102,7 +102,7 @@ export default {
       action: 'onMouseLeave',
     },
   },
-} as ComponentMeta<typeof Component>;
+} as Meta<typeof Component>;
 
 interface DataType {
   key: React.Key;

@@ -1,6 +1,6 @@
 import React, { FC, useState, useRef, useCallback } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { useArgs } from '@storybook/client-api';
 import {
   ButtonSize,
@@ -144,7 +144,7 @@ export default {
       ),
     },
   },
-} as ComponentMeta<typeof ConfigProvider>;
+} as Meta<typeof ConfigProvider>;
 
 const ThemedComponents: FC = () => {
   const [showVarThemeModal, setShowVarThemeModal] = useState(false);

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { useArgs } from '@storybook/client-api';
 import {
   Stepper,
@@ -131,7 +131,7 @@ export default {
       control: 'boolean',
     },
   },
-} as ComponentMeta<typeof Stepper>;
+} as Meta<typeof Stepper>;
 
 const themes: StepperThemeName[] = [
   'red',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { ButtonSize, PrimaryButton } from '../Button';
 import { Tooltip, TooltipTheme } from './';
 
@@ -119,7 +119,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof Tooltip>;
+} as Meta<typeof Tooltip>;
 
 const Tooltip_Story: StoryFn<typeof Tooltip> = (args) => <Tooltip {...args} />;
 

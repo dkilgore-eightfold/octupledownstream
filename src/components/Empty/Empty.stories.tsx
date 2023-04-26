@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Empty, EmptyMode } from './';
 import { Icon, IconName } from '../Icon';
 
@@ -35,7 +35,7 @@ export default {
       control: { type: 'select' },
     },
   },
-} as ComponentMeta<typeof Empty>;
+} as Meta<typeof Empty>;
 
 const Empty_Story: StoryFn<typeof Empty> = (args) => <Empty {...args} />;
 

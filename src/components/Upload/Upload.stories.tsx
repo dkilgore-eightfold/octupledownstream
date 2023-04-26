@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import Upload from '.';
 import {
   OcFile,
@@ -46,7 +46,7 @@ export default {
     },
   },
   argTypes: {},
-} as ComponentMeta<typeof Upload>;
+} as Meta<typeof Upload>;
 
 const snackArgs: Object = {
   position: 'top-center',

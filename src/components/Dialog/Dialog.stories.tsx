@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Dialog, DialogSize } from './';
 import { PrimaryButton } from '../Button';
 import { DialogHelper as dialogHelper } from './DialogHelper';
@@ -126,7 +126,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof Dialog>;
+} as Meta<typeof Dialog>;
 
 const Medium_Story: StoryFn<typeof Dialog> = (args) => {
   const [visible, setVisible] = useState<boolean>(false);

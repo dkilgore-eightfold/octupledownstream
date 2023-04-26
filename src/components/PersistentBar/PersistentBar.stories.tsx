@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { PersistentBar, PersistentBarType } from './';
 import { IconName } from '../Icon';
 import { PaginationLayoutOptions } from '../Pagination';
@@ -39,7 +39,7 @@ export default {
       ),
     },
   },
-} as ComponentMeta<typeof PersistentBar>;
+} as Meta<typeof PersistentBar>;
 
 const Bottom_Bar_With_Text_Story: StoryFn<typeof PersistentBar> = (args) => (
   <PersistentBar {...args} />

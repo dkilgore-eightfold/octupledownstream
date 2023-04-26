@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Spinner, SpinnerSize } from './';
 
 export default {
@@ -61,7 +61,7 @@ export default {
       control: { type: 'select' },
     },
   },
-} as ComponentMeta<typeof Spinner>;
+} as Meta<typeof Spinner>;
 
 const Spinner_Story: StoryFn<typeof Spinner> = (args) => <Spinner {...args} />;
 

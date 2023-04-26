@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
 import { action } from '@storybook/addon-actions';
-import { ComponentMeta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Avatar, AvatarGroup, AvatarGroupVariant, AvatarPopupProps } from '.';
 import { TooltipSize, TooltipTheme } from '../Tooltip';
 
@@ -33,7 +33,7 @@ export default {
       control: { type: 'inline-radio' },
     },
   },
-} as ComponentMeta<typeof AvatarGroup>;
+} as Meta<typeof AvatarGroup>;
 
 const imageProps = {
   src: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg',

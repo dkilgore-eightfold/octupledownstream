@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { ComponentMeta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { List } from '../List';
 import { IconName } from '../Icon';
 import { Accordion, AccordionProps, AccordionSize, AccordionShape } from './';
@@ -37,7 +37,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof Accordion>;
+} as Meta<typeof Accordion>;
 
 const listItems: AccordionProps[] = [
   {

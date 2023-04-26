@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import {
   Pagination,
   PaginationLayoutOptions,
@@ -52,7 +52,7 @@ export default {
       action: 'onCurrentChange',
     },
   },
-} as ComponentMeta<typeof Pagination>;
+} as Meta<typeof Pagination>;
 
 const Basic_Few_Story: StoryFn<typeof Pagination> = (args) => (
   <Pagination {...args} />

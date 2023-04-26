@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import dayjs from 'dayjs';
 import type { Dayjs } from 'dayjs';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import DatePicker from './';
 import { DatePickerShape, DatePickerSize } from './';
 import type { DatePickerProps, RangePickerProps } from './';
@@ -87,7 +87,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof DatePicker>;
+} as Meta<typeof DatePicker>;
 
 const Single_Picker_Story: StoryFn<typeof DatePicker> = (args) => {
   const onChange: DatePickerProps['onChange'] = (date, dateString) => {

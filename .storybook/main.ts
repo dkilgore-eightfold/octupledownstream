@@ -1,7 +1,8 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 import { UserConfig, mergeConfig } from 'vite';
+// import istanbul from 'vite-plugin-istanbul';
 import * as viteConfig from '../vite.config';
-import * as path from 'path';
+import path from 'path';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -10,23 +11,31 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-links',
-    'storybook-css-modules',
+    // '@storybook/addon-styling',
     '@storybook/addon-a11y',
     'storybook-addon-rtl',
-    '@storybook/preset-create-react-app',
     {
-      name: '@storybook/preset-scss',
+      name: '@storybook/addon-postcss',
       options: {
-        sassLoaderOptions: {
+        styleLoaderOptions: {},
+        cssLoaderOptions: {
           modules: true,
+          sourceMap: true,
+          importLoaders: 1,
+        },
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
         },
       },
     },
   ],
   staticDirs: ['../public/assets'],
-  framework: {
-    name: '@storybook/react-vite',
-    options: {},
+  framework: '@storybook/react-vite',
+  core: {
+    builder: '@storybook/builder-vite',
+  },
+  features: {
+    storyStoreV7: true,
   },
   typescript: {
     check: false,
@@ -37,7 +46,10 @@ const config: StorybookConfig = {
         prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },
   },
-  async viteFinal(config: UserConfig) {
+  async viteFinal(
+    config: UserConfig,
+    { configType }
+  ): Promise<Record<string, any>> {
     // Merge custom configuration into the default config
     return mergeConfig(config, {
       ...viteConfig,
@@ -45,20 +57,27 @@ const config: StorybookConfig = {
         devSourceMap: true,
         preprocessorOptions: {
           scss: {
-            additionalData: `@import "../src/styles/main";`,
+            additionalData: `@import "${path.resolve(
+              __dirname,
+              '../src/styles/main.scss'
+            )}";`,
+            modules: {
+              generateScopedName: '[local]_[hash:base64:7]',
+              localsConvention: 'camelCase',
+            },
           },
         },
       },
-      define: { 'process.env': {} },
-      // Add dependencies to pre-optimization
-      optimizeDeps: {
-        include: ['storybook-dark-mode'],
+      define: configType === 'DEVELOPMENT' && {
+        'process.env': {},
+        global: {},
       },
       // plugins: [
       //   istanbul({
-      //     include: 'src/*',
-      //     exclude: ['node_modules', 'test/'],
-      //     extension: ['.js', '.ts', '.tsx'],
+      //     include: ['src/*'],
+      //     exclude: ['node_modules', 'test', 'stories'],
+      //     extension: ['.ts', '.tsx'],
+      //     forceBuildInstrument: process.env.COVERAGE === 'true',
       //   }),
       // ],
     });

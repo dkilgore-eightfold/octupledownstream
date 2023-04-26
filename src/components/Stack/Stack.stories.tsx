@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Stack } from './Stack';
 import styles from './stack.stories.module.scss';
 
@@ -91,7 +91,7 @@ export default {
       control: { type: 'select' },
     },
   },
-} as ComponentMeta<typeof Stack>;
+} as Meta<typeof Stack>;
 
 const Horizontal_Story: StoryFn<typeof Stack> = (args) => {
   return <Stack {...args}>{args.children}</Stack>;

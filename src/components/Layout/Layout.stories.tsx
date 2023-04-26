@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import Layout from './';
 import { Navbar, NavbarContent } from '../Navbar';
 import { Icon, IconName } from '../Icon';
@@ -35,7 +35,7 @@ export default {
       ),
     },
   },
-} as ComponentMeta<typeof Layout>;
+} as Meta<typeof Layout>;
 
 const sampleList: string[] = [1, 2, 3, 4, 5].map((i) => `User ${i}`);
 

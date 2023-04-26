@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { ComponentMeta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Slider, SliderSize, SliderTrackStatus } from './';
 import { Stack } from '../Stack';
 import { Col, Row } from '../Grid';
@@ -21,7 +21,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof Slider>;
+} as Meta<typeof Slider>;
 
 const Slider_Story: StoryFn<typeof Slider> = (args) => {
   const [transientSlidingAValue, setTransientSlidingAValue] = useState<number>(

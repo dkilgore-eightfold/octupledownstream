@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Card, CardType } from './';
 import { IconName } from '../Icon';
 import { Avatar } from '../Avatar';
@@ -29,7 +29,7 @@ export default {
       ),
     },
   },
-} as ComponentMeta<typeof Card>;
+} as Meta<typeof Card>;
 
 const Base_Card_Story: StoryFn<typeof Card> = (args) => <Card {...args} />;
 

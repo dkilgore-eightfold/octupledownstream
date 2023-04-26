@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stories } from '@storybook/addon-docs';
-import { StoryFn, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Icon, IconName } from '../Icon';
 import { Link } from './';
 
@@ -58,7 +58,7 @@ export default {
       action: 'click',
     },
   },
-} as ComponentMeta<typeof Link>;
+} as Meta<typeof Link>;
 
 const Link_Story: StoryFn<typeof Link> = (args) => {
   // Prevents :visited from persisting
