@@ -70,6 +70,8 @@ import { Dropdown } from './components/Dropdown';
 
 import { Empty, EmptyMode } from './components/Empty';
 
+import { FadeIn } from './components/FadeIn';
+
 import Form, { FormInstance } from './components/Form';
 
 import Grid, { Col, Row } from './components/Grid';
@@ -77,6 +79,16 @@ import Grid, { Col, Row } from './components/Grid';
 import { Icon, IconName, IconSize } from './components/Icon';
 
 import { InlineSvgProps, InlineSvg } from './components/InlineSvg';
+
+import {
+  KanbanBoard,
+  KanbanBoardProps,
+  KanbanItemWrapperProps,
+  KanbanDragResult,
+  KanbanLaneGroupProps,
+} from './components/Kanban';
+
+import { KanbanCard, KanbanCardProps } from './components/Kanban/KanbanCard';
 
 import { Label, LabelSize } from './components/Label';
 
@@ -287,6 +299,7 @@ export {
   Empty,
   EmptyMode,
   ExpandableConfig,
+  FadeIn,
   FilterConfirmProps,
   FilterValue,
   Form,
@@ -299,6 +312,13 @@ export {
   InfoBarType,
   InlineSvgProps,
   InlineSvg,
+  KanbanBoard,
+  KanbanBoardProps,
+  KanbanCard,
+  KanbanCardProps,
+  KanbanItemWrapperProps,
+  KanbanDragResult,
+  KanbanLaneGroupProps,
   Label,
   LabelAlign,
   LabelPosition,

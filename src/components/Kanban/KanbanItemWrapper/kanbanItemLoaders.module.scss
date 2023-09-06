@@ -1,0 +1,9 @@
+.loader-outer {
+  padding: 0 $space-m;
+
+  .item {
+    height: fit-content;
+    margin-bottom: $space-m;
+    width: 100%;
+  }
+}

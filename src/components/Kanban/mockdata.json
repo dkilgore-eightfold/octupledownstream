@@ -1,0 +1,29 @@
+{
+  "constants": {
+    "board": [
+      {
+        "lane_id": "LANE_1",
+        "data-testid": "kanban-lane-1",
+        "dropzones": [{ "sub_lane": "Lane 1" }],
+        "display_name": "Lane 1"
+      },
+      {
+        "lane_id": "LANE_2",
+        "data-testid": "kanban-lane-2",
+        "dropzones": [
+          { "sub_lane": "Lane 2 Sub Lane 1" },
+          { "sub_lane": "Lane 2 Sub Lane 2" },
+          { "sub_lane": "Lane 2 Sub Lane 3" },
+          { "sub_lane": "Lane 2 Sub Lane 4" }
+        ],
+        "display_name": "Lane 2"
+      },
+      {
+        "lane_id": "LANE_3",
+        "data-testid": "kanban-lane-3",
+        "dropzones": [{ "sub_lane": "Lane 3" }],
+        "display_name": "Lane 3"
+      }
+    ]
+  }
+}

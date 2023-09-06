@@ -2,6 +2,7 @@ import React from 'react';
 import memoizeOne from 'memoize-one';
 import type { BreadcrumbLocale } from '../Breadcrumb/Breadcrumb.types';
 import type { DialogLocale } from '../Dialog/BaseDialog/BaseDialog.types';
+import type { KanbanLocale } from '../Kanban/Kanban.types';
 import type { PaginationLocale } from '../Pagination';
 import type { PanelLocale } from '../Panel';
 import type { PersistentBarLocale } from '../PersistentBar/PersistentBar.types';
@@ -24,6 +25,7 @@ export interface Locale {
     defaultValidateMessages: ValidateMessages;
   };
   InfoBar?: InfoBarLocale;
+  Kanban?: KanbanLocale;
   Pagination?: PaginationLocale;
   Panel?: PanelLocale;
   PersistentBar?: PersistentBarLocale;

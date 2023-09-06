@@ -1,0 +1,694 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
+<div>
+  <div
+    class="stack kanban-board kanban-board-test-class horizontal undefined gap-m"
+    data-testid="test-kanbanboard"
+    id="kanbanBoardTestId"
+    items="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+    style="background: red;"
+  >
+    <div
+      class="animated-wrapper"
+      style="min-width: 400px;"
+    >
+      <div
+        class="lane-group"
+        style="height: calc(100vh - 64px);"
+      >
+        <div
+          class="stack header full-width horizontal undefined"
+          style="align-items: center; justify-content: space-between;"
+        >
+          <div
+            class="stack horizontal undefined gap-xs"
+            style="align-items: center;"
+          >
+            <span>
+              Lane 1
+            </span>
+            <span
+              class="badge"
+            >
+              8
+            </span>
+          </div>
+          <div
+            class="stack horizontal undefined gap-xs"
+            style="align-items: center;"
+          />
+        </div>
+        <div
+          class="lane-container"
+          data-testid="kanban-lane-1"
+          style="opacity: 0;"
+        >
+          <div
+            class="lane"
+            data-rbd-droppable-context-id="0"
+            data-rbd-droppable-id="LANE_1"
+          >
+            <div
+              style="overflow: visible; height: 0px; width: 0px;"
+            >
+              <div
+                class="list"
+                style="position: relative; width: 400px; overflow: auto; will-change: transform; direction: ltr;"
+              >
+                <div
+                  style="height: 850px; width: 100%;"
+                >
+                  <div
+                    style="position: absolute; left: 0px; top: 0px; height: 200px; width: 100%;"
+                  >
+                    <div
+                      aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                      class="draggable-item-wrapper"
+                      data-rbd-drag-handle-context-id="0"
+                      data-rbd-drag-handle-draggable-id="item-0"
+                      data-rbd-draggable-context-id="0"
+                      data-rbd-draggable-id="item-0"
+                      draggable="false"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <div
+                        class="draggable-item"
+                        data-testid="item-0"
+                      >
+                        <div
+                          class="card-wrapper"
+                        >
+                          <div
+                            class="card-outer-wrapper"
+                          >
+                            <div
+                              class="card card card-bordered list card-small"
+                              data-testid="test-kanbancard-0"
+                              focus-visible-id="focus-visible-target"
+                              id="ochwo0c"
+                            >
+                              <div
+                                class="stack full-width vertical undefined gap-s"
+                                dir="ltr"
+                              >
+                                <div
+                                  class="stack full-width horizontal undefined gap-xs"
+                                  dir="ltr"
+                                  style="align-items: flex-start; justify-content: space-between;"
+                                >
+                                  <div
+                                    class="selector selector-medium checkbox"
+                                  >
+                                    <input
+                                      aria-disabled="false"
+                                      aria-label="Select card"
+                                      id="g65ga5d"
+                                      readonly=""
+                                      type="checkbox"
+                                      value=""
+                                    />
+                                    <label
+                                      class=""
+                                      for="g65ga5d"
+                                    >
+                                      <span
+                                        class="checkmark"
+                                      />
+                                      <span
+                                        class="selector-label selector-label-end"
+                                      />
+                                    </label>
+                                  </div>
+                                  <div
+                                    class="header"
+                                  >
+                                    <div>
+                                      Item 0
+                                       header
+                                    </div>
+                                  </div>
+                                  <button
+                                    aria-checked="false"
+                                    aria-disabled="false"
+                                    aria-label="Expand"
+                                    aria-pressed="false"
+                                    class="expand-button button button-system-ui button-medium round-shape icon-left"
+                                  >
+                                    <span
+                                      aria-hidden="false"
+                                      class="icon icon-wrapper"
+                                      role="presentation"
+                                    >
+                                      <svg
+                                        role="presentation"
+                                        style="width: 20px; height: 20px;"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                                          style="fill: currentColor;"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                                <div>
+                                  Item 0
+                                   body
+                                </div>
+                                <div
+                                  style="height: 0px; opacity: 0; margin-top: -8px;"
+                                >
+                                  <div
+                                    class="expanded-content"
+                                  >
+                                    <div
+                                      class="divider-expanded-card"
+                                    />
+                                    <div>
+                                      <div>
+                                        Item 0
+                                         expanded content
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  style="height: 0px; opacity: 0; margin-top: -8px;"
+                                >
+                                  <div
+                                    class="stack vertical undefined gap-m"
+                                    dir="ltr"
+                                    style="justify-content: flex-end;"
+                                  >
+                                    <div
+                                      class="divider-hover-actions"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="position: absolute; left: 0px; top: 200px; height: 200px; width: 100%;"
+                  >
+                    <div
+                      aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                      class="draggable-item-wrapper"
+                      data-rbd-drag-handle-context-id="0"
+                      data-rbd-drag-handle-draggable-id="item-1"
+                      data-rbd-draggable-context-id="0"
+                      data-rbd-draggable-id="item-1"
+                      draggable="false"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <div
+                        class="draggable-item"
+                        data-testid="item-1"
+                      >
+                        <div
+                          class="card-wrapper"
+                        >
+                          <div
+                            class="card-outer-wrapper"
+                          >
+                            <div
+                              class="card card card-bordered list card-small"
+                              data-testid="test-kanbancard-1"
+                              focus-visible-id="focus-visible-target"
+                              id="yhsxeuz"
+                            >
+                              <div
+                                class="stack full-width vertical undefined gap-s"
+                                dir="ltr"
+                              >
+                                <div
+                                  class="stack full-width horizontal undefined gap-xs"
+                                  dir="ltr"
+                                  style="align-items: flex-start; justify-content: space-between;"
+                                >
+                                  <div
+                                    class="selector selector-medium checkbox"
+                                  >
+                                    <input
+                                      aria-disabled="false"
+                                      aria-label="Select card"
+                                      id="1driuq4"
+                                      readonly=""
+                                      type="checkbox"
+                                      value=""
+                                    />
+                                    <label
+                                      class=""
+                                      for="1driuq4"
+                                    >
+                                      <span
+                                        class="checkmark"
+                                      />
+                                      <span
+                                        class="selector-label selector-label-end"
+                                      />
+                                    </label>
+                                  </div>
+                                  <div
+                                    class="header"
+                                  >
+                                    <div>
+                                      Item 1
+                                       header
+                                    </div>
+                                  </div>
+                                  <button
+                                    aria-checked="false"
+                                    aria-disabled="false"
+                                    aria-label="Expand"
+                                    aria-pressed="false"
+                                    class="expand-button button button-system-ui button-medium round-shape icon-left"
+                                  >
+                                    <span
+                                      aria-hidden="false"
+                                      class="icon icon-wrapper"
+                                      role="presentation"
+                                    >
+                                      <svg
+                                        role="presentation"
+                                        style="width: 20px; height: 20px;"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                                          style="fill: currentColor;"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                                <div>
+                                  Item 1
+                                   body
+                                </div>
+                                <div
+                                  style="height: 0px; opacity: 0; margin-top: -8px;"
+                                >
+                                  <div
+                                    class="expanded-content"
+                                  >
+                                    <div
+                                      class="divider-expanded-card"
+                                    />
+                                    <div>
+                                      <div>
+                                        Item 1
+                                         expanded content
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  style="height: 0px; opacity: 0; margin-top: -8px;"
+                                >
+                                  <div
+                                    class="stack vertical undefined gap-m"
+                                    dir="ltr"
+                                    style="justify-content: flex-end;"
+                                  >
+                                    <div
+                                      class="divider-hover-actions"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="position: absolute; left: 0px; top: 400px; height: 200px; width: 100%;"
+                  >
+                    <div
+                      aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                      class="draggable-item-wrapper"
+                      data-rbd-drag-handle-context-id="0"
+                      data-rbd-drag-handle-draggable-id="item-2"
+                      data-rbd-draggable-context-id="0"
+                      data-rbd-draggable-id="item-2"
+                      draggable="false"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <div
+                        class="draggable-item"
+                        data-testid="item-2"
+                      >
+                        <div
+                          class="card-wrapper"
+                        >
+                          <div
+                            class="card-outer-wrapper"
+                          >
+                            <div
+                              class="card card card-bordered list card-small"
+                              data-testid="test-kanbancard-2"
+                              focus-visible-id="focus-visible-target"
+                              id="z9lu83n"
+                            >
+                              <div
+                                class="stack full-width vertical undefined gap-s"
+                                dir="ltr"
+                              >
+                                <div
+                                  class="stack full-width horizontal undefined gap-xs"
+                                  dir="ltr"
+                                  style="align-items: flex-start; justify-content: space-between;"
+                                >
+                                  <div
+                                    class="selector selector-medium checkbox"
+                                  >
+                                    <input
+                                      aria-disabled="false"
+                                      aria-label="Select card"
+                                      id="bmkm5yy"
+                                      readonly=""
+                                      type="checkbox"
+                                      value=""
+                                    />
+                                    <label
+                                      class=""
+                                      for="bmkm5yy"
+                                    >
+                                      <span
+                                        class="checkmark"
+                                      />
+                                      <span
+                                        class="selector-label selector-label-end"
+                                      />
+                                    </label>
+                                  </div>
+                                  <div
+                                    class="header"
+                                  >
+                                    <div>
+                                      Item 2
+                                       header
+                                    </div>
+                                  </div>
+                                  <button
+                                    aria-checked="false"
+                                    aria-disabled="false"
+                                    aria-label="Expand"
+                                    aria-pressed="false"
+                                    class="expand-button button button-system-ui button-medium round-shape icon-left"
+                                  >
+                                    <span
+                                      aria-hidden="false"
+                                      class="icon icon-wrapper"
+                                      role="presentation"
+                                    >
+                                      <svg
+                                        role="presentation"
+                                        style="width: 20px; height: 20px;"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                                          style="fill: currentColor;"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                                <div>
+                                  Item 2
+                                   body
+                                </div>
+                                <div
+                                  style="height: 0px; opacity: 0; margin-top: -8px;"
+                                >
+                                  <div
+                                    class="expanded-content"
+                                  >
+                                    <div
+                                      class="divider-expanded-card"
+                                    />
+                                    <div>
+                                      <div>
+                                        Item 2
+                                         expanded content
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  style="height: 0px; opacity: 0; margin-top: -8px;"
+                                >
+                                  <div
+                                    class="stack vertical undefined gap-m"
+                                    dir="ltr"
+                                    style="justify-content: flex-end;"
+                                  >
+                                    <div
+                                      class="divider-hover-actions"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="dropzone-container"
+          >
+            <div
+              class="dropzone"
+              data-rbd-droppable-context-id="0"
+              data-rbd-droppable-id="Lane 1"
+            >
+              <div
+                class="dropzone-name"
+              >
+                Lane 1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="animated-wrapper"
+      style="min-width: 400px;"
+    >
+      <div
+        class="lane-group"
+        style="height: calc(100vh - 64px);"
+      >
+        <div
+          class="stack header full-width horizontal undefined"
+          style="align-items: center; justify-content: space-between;"
+        >
+          <div
+            class="stack horizontal undefined gap-xs"
+            style="align-items: center;"
+          >
+            <span>
+              Lane 2
+            </span>
+            <span
+              class="badge"
+            >
+              0
+            </span>
+          </div>
+          <div
+            class="stack horizontal undefined gap-xs"
+            style="align-items: center;"
+          >
+            <button
+              aria-checked="false"
+              aria-disabled="false"
+              aria-label="Expand"
+              aria-pressed="false"
+              class="button button-system-ui button-medium round-shape icon-left"
+            >
+              <span
+                aria-hidden="false"
+                class="icon icon-wrapper"
+                role="presentation"
+              >
+                <svg
+                  role="presentation"
+                  style="width: 20px; height: 20px;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M2 6H6V17H2V6M7 19H17V4H7V19M9 6H15V17H9V6M18 6H22V17H18V6Z"
+                    style="fill: currentColor;"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="lane-container"
+          data-testid="kanban-lane-2"
+          style="opacity: 0;"
+        >
+          <div
+            class="lane"
+            data-rbd-droppable-context-id="0"
+            data-rbd-droppable-id="LANE_2"
+          >
+            <div
+              style="overflow: visible; height: 0px; width: 0px;"
+            >
+              <div
+                class="list"
+                style="position: relative; width: 400px; overflow: auto; will-change: transform; direction: ltr;"
+              >
+                <div
+                  style="height: 0px; width: 100%;"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="dropzone-container"
+          >
+            <div
+              class="dropzone"
+              data-rbd-droppable-context-id="0"
+              data-rbd-droppable-id="Lane 2 Sub Lane 1"
+            >
+              <div
+                class="dropzone-name"
+              >
+                Lane 2 Sub Lane 1
+              </div>
+            </div>
+            <div
+              class="dropzone"
+              data-rbd-droppable-context-id="0"
+              data-rbd-droppable-id="Lane 2 Sub Lane 2"
+            >
+              <div
+                class="dropzone-name"
+              >
+                Lane 2 Sub Lane 2
+              </div>
+            </div>
+            <div
+              class="dropzone"
+              data-rbd-droppable-context-id="0"
+              data-rbd-droppable-id="Lane 2 Sub Lane 3"
+            >
+              <div
+                class="dropzone-name"
+              >
+                Lane 2 Sub Lane 3
+              </div>
+            </div>
+            <div
+              class="dropzone"
+              data-rbd-droppable-context-id="0"
+              data-rbd-droppable-id="Lane 2 Sub Lane 4"
+            >
+              <div
+                class="dropzone-name"
+              >
+                Lane 2 Sub Lane 4
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="animated-wrapper"
+      style="min-width: 400px;"
+    >
+      <div
+        class="lane-group"
+        style="height: calc(100vh - 64px);"
+      >
+        <div
+          class="stack header full-width horizontal undefined"
+          style="align-items: center; justify-content: space-between;"
+        >
+          <div
+            class="stack horizontal undefined gap-xs"
+            style="align-items: center;"
+          >
+            <span>
+              Lane 3
+            </span>
+            <span
+              class="badge"
+            >
+              0
+            </span>
+          </div>
+          <div
+            class="stack horizontal undefined gap-xs"
+            style="align-items: center;"
+          />
+        </div>
+        <div
+          class="lane-container"
+          data-testid="kanban-lane-3"
+          style="opacity: 0;"
+        >
+          <div
+            class="lane"
+            data-rbd-droppable-context-id="0"
+            data-rbd-droppable-id="LANE_3"
+          >
+            <div
+              style="overflow: visible; height: 0px; width: 0px;"
+            >
+              <div
+                class="list"
+                style="position: relative; width: 400px; overflow: auto; will-change: transform; direction: ltr;"
+              >
+                <div
+                  style="height: 0px; width: 100%;"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="dropzone-container"
+          >
+            <div
+              class="dropzone"
+              data-rbd-droppable-context-id="0"
+              data-rbd-droppable-id="Lane 3"
+            >
+              <div
+                class="dropzone-name"
+              >
+                Lane 3
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

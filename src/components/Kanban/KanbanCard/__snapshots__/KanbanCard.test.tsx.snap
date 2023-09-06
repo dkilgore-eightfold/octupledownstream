@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KanbanCard Renders Basic KanbanCard without crashing 1`] = `
+<div>
+  <div
+    class="card-wrapper"
+  >
+    <div
+      class="card-outer-wrapper"
+    >
+      <div
+        class="card card card-bordered list card-small"
+        data-testid="test-kanbancard"
+        focus-visible-id="focus-visible-target"
+        id="9vrnnr2"
+      >
+        <div
+          class="stack full-width vertical undefined gap-s"
+          dir="ltr"
+        >
+          <div
+            class="stack full-width horizontal undefined gap-xs"
+            dir="ltr"
+            style="align-items: flex-start; justify-content: space-between;"
+          >
+            <div
+              class="header"
+            >
+              <div>
+                header
+              </div>
+            </div>
+            <button
+              aria-checked="false"
+              aria-disabled="false"
+              aria-label="Expand"
+              aria-pressed="false"
+              class="expand-button button button-system-ui button-medium round-shape icon-left"
+            >
+              <span
+                aria-hidden="false"
+                class="icon icon-wrapper"
+                role="presentation"
+              >
+                <svg
+                  role="presentation"
+                  style="width: 20px; height: 20px;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                    style="fill: currentColor;"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div>
+            body
+          </div>
+          <div
+            style="height: 0px; opacity: 0; margin-top: 0px;"
+          >
+            <div
+              class="expanded-content"
+            >
+              <div
+                class="divider-expanded-card"
+              />
+              <div>
+                <div>
+                  expanded content
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="height: 0px; opacity: 0; margin-top: 0px;"
+          >
+            <div
+              class="stack vertical undefined gap-m"
+              dir="ltr"
+              style="justify-content: flex-end;"
+            >
+              <div
+                class="divider-hover-actions"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

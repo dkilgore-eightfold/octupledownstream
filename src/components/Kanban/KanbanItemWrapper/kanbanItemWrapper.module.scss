@@ -1,0 +1,17 @@
+.draggable-item-wrapper {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+:global(.focus-visible) {
+  .draggable-item-wrapper {
+    &:focus-visible {
+      .draggable-item {
+        [focus-visible-id='focus-visible-target'] {
+          box-shadow: var(--focus-visible-box-shadow);
+        }
+      }
+    }
+  }
+}

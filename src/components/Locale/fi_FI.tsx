@@ -3,6 +3,7 @@ import Breadcrumb from '../Breadcrumb/Locale/fi_FI';
 import DatePicker from '../DateTimePicker/DatePicker/Locale/fi_FI';
 import Dialog from '../Dialog/BaseDialog/Locale/fi_FI';
 import InfoBar from '../InfoBar/Locale/fi_FI';
+import Kanban from '../Kanban/Locale/fi_FI';
 import Pagination from '../Pagination/Locale/fi_FI';
 import Panel from '../Panel/Locale/fi_FI';
 import PersistentBar from '../PersistentBar/Locale/fi_FI';
@@ -17,6 +18,7 @@ const localeValues: Locale = {
   DatePicker,
   Dialog,
   InfoBar,
+  Kanban,
   Pagination,
   Panel,
   PersistentBar,

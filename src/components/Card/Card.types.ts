@@ -9,7 +9,7 @@ export enum CardSize {
   Flex = 'flex',
   Large = 'large',
   Medium = 'medium',
-  Small = 'medium',
+  Small = 'small',
 }
 
 export enum CardType {

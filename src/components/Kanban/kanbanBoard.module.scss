@@ -1,0 +1,14 @@
+.kanban-board {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: var(--kanban-lane-group-border-width);
+  position: relative;
+  scroll-behavior: unset;
+  width: 100%;
+  z-index: 4;
+
+  &-horizontal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

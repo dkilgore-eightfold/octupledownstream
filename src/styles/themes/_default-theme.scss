@@ -1238,4 +1238,70 @@
   --progress-success-text-color: var(--success-color);
   --progress-text-color: var(--text-primary-color);
   // ------ Progress theme ------
+
+  // ------ Kanban theme ------
+  --kanban-card-background-color: var(--background-color);
+  --kanban-card-font-family: var(--font-stack-full);
+  --kanban-card-text-color: var(--black-color);
+  --kanban-card-border-color: var(--grey-background2-color);
+  --kanban-card-border-radius: var(--border-radius-xl);
+  --kanban-card-border-width: 1px;
+  --kanban-card-border-style: solid;
+  --kanban-card-border: var(--kanban-card-border-width)
+    var(--kanban-card-border-style) var(--kanban-card-border-color);
+  --kanban-card-divider-color: var(--grey-background2-color);
+  --kanban-card-hover-box-shadow: 0px 1px 2px rgba(15, 20, 31, 0.12),
+    0px 2px 8px rgba(15, 20, 31, 0.16);
+  --kanban-dropzone-border-color: var(--primary-color-40);
+  --kanban-dropzone-border-width: 1px;
+  --kanban-dropzone-border-style: dashed;
+  --kanban-dropzone-border: var(--kanban-dropzone-border-width)
+    var(--kanban-dropzone-border-style) var(--kanban-dropzone-border-color);
+  --kanban-dropzone-border-radius: 0;
+  --kanban-dropzone-background-color: var(--primary-background1-color);
+  --kanban-dropzone-hover-background-color: var(--primary-background2-color);
+  --kanban-dropzone-disabled-background-color: var(--grey-color-20);
+  --kanban-dropzone-name-line-height: 20px;
+  --kanban-dropzone-name-text-color: var(--text-secondary-color);
+  --kanban-dropzone-name-font-family: var(--font-stack-full);
+  --kanban-dropzone-name-font-size: 14px;
+  --kanban-dropzone-name-font-weight: 600;
+  --kanban-lane-group-border-color: transparent;
+  --kanban-lane-group-border-width: 1px;
+  --kanban-lane-group-border-style: solid;
+  --kanban-lane-group-border: var(--kanban-lane-group-border-width)
+    var(--kanban-lane-group-border-style) var(--kanban-lane-group-border-color);
+  --kanban-lane-group-border-radius: var(--border-radius-xl);
+  --kanban-lane-group-background-color: var(--grey-background1-color);
+  --kanban-lane-group-header-height: 60px;
+  --kanban-lane-group-header-line-height: 24px;
+  --kanban-lane-group-header-text-color: var(--text-tertiary-color);
+  --kanban-lane-group-header-font-family: var(--font-stack-full);
+  --kanban-lane-group-header-font-size: 16px;
+  --kanban-lane-group-header-font-weight: 600;
+  --kanban-selected-badge-background-color: var(--grey-background2-color);
+  --kanban-selected-badge-text-color: var(--grey-color);
+  --kanban-selected-badge-border-color: var(--grey-background2-color);
+  --kanban-selected-badge-border-radius: var(--border-radius-xl);
+  --kanban-selected-badge-border-width: 1px;
+  --kanban-selected-badge-border-style: solid;
+  --kanban-selected-badge-border: var(--kanban-selected-badge-border-width)
+    var(--kanban-selected-badge-border-style)
+    var(--kanban-selected-badge-border-color);
+  --kanban-selected-badge-border-radius: var(--border-radius-xl);
+  --kanban-selected-badge-font-family: var(--font-stack-full);
+  --kanban-selected-badge-font-weight: 400;
+  --kanban-selected-badge-font-size: 14px;
+  --kanban-selected-badge-line-height: 20px;
+  --kanban-sub-lane-border-color: transparent;
+  --kanban-sub-lane-border-width: 1px;
+  --kanban-sub-lane-border-style: solid;
+  --kanban-sub-lane-border: var(--kanban-sub-lane-border-width)
+    var(--kanban-sub-lane-border-style) var(--kanban-sub-lane-border-color);
+  --kanban-sub-lane-border-radius: var(--border-radius-xl);
+  --kanban-sub-lane-background-color: var(--background-color);
+  --kanban-sub-lane-header-text-color: var(--text-tertiary-color);
+  --kanban-sub-lane-header-font-family: var(--font-stack-full);
+  --kanban-sub-lane-header-font-weight: 600;
+  // ------ Kanban theme ------
 }

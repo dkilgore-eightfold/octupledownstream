@@ -1,0 +1,85 @@
+.lane-group {
+  background: var(--kanban-lane-group-background-color);
+  border: var(--kanban-lane-group-border);
+  border-radius: var(--kanban-lane-group-border-radius);
+  padding-bottom: $space-m;
+  position: relative;
+  margin-bottom: $space-m;
+
+  &:has(.loader-lane) {
+    overflow: hidden;
+  }
+
+  .selected-badge {
+    padding: 0 $space-xs;
+    border-radius: var(--kanban-selected-badge-border-radius);
+    color: var(--kanban-selected-badge-text-color);
+    background-color: var(--kanban-selected-badge-background-color);
+    font-family: var(--kanban-selected-badge-font-family);
+    font-weight: var(--kanban-selected-badge-font-weight);
+    font-size: var(--kanban-selected-badge-font-size);
+    line-height: var(--kanban-selected-badge-line-height);
+  }
+
+  .loader-lane {
+    display: flex;
+    flex-direction: column;
+    gap: $space-m;
+    height: inherit;
+    padding: 0 $space-m;
+  }
+
+  &.expanded {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .header {
+    background: inherit;
+    border-top-left-radius: var(--kanban-lane-group-border-radius);
+    border-top-right-radius: var(--kanban-lane-group-border-radius);
+    color: var(--kanban-lane-group-header-text-color);
+    font-family: var(--kanban-lane-group-header-font-family);
+    font-weight: var(--kanban-lane-group-header-font-weight);
+    font-size: var(--kanban-lane-group-header-font-size);
+    height: var(--kanban-lane-group-header-height);
+    line-height: var(--kanban-lane-group-header-line-height);
+    padding: $space-m;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .sub-lane-container {
+    flex: 1;
+    width: 100%;
+  }
+
+  &-horizontal {
+    padding-bottom: unset;
+    margin-bottom: unset;
+
+    .loader-lane {
+      flex-direction: row;
+      gap: $space-m;
+      height: unset;
+      padding: $space-m 0;
+      width: inherit;
+    }
+
+    &.expanded {
+      height: auto;
+      width: auto;
+    }
+
+    .sub-lane-container {
+      padding-left: $space-m;
+      padding-right: $space-m;
+    }
+  }
+}
+
+.animated-wrapper {
+  position: relative;
+}

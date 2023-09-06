@@ -1,0 +1,57 @@
+.card-wrapper {
+  .card-outer-wrapper {
+    padding: $space-xxxs $space-m calc($space-xs - $space-xxxs);
+
+    .card {
+      background: var(--kanban-card-background-color);
+      border: var(--kanban-card-border);
+      border-radius: var(--kanban-card-border-radius);
+      color: var(--kanban-card-text-color);
+      font-family: var(--kanban-card-font-family);
+      height: fit-content;
+      transition: border-radius 150ms;
+      width: 100%;
+
+      &:hover {
+        box-shadow: var(--kanban-card-hover-box-shadow);
+      }
+    }
+  }
+}
+
+.checkbox {
+  margin: $space-xxs;
+}
+
+.header {
+  flex: 1;
+  margin-left: -$space-xs;
+  margin-top: $space-xxxs;
+}
+
+.expand-button {
+  opacity: 0;
+  transition: opacity $motion-duration-extra-fast $motion-easing-easeinout;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.expanded-content {
+  opacity: 0;
+  pointer-events: none;
+
+  &.expanded {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.divider-expanded-card,
+.divider-hover-actions {
+  background: var(--kanban-card-divider-color);
+  height: 1px;
+  margin: $space-xs 0;
+  width: 100%;
+}

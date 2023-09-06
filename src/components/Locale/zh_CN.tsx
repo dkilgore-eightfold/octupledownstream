@@ -4,6 +4,7 @@ import Breadcrumb from '../Breadcrumb/Locale/zh_CN';
 import DatePicker from '../DateTimePicker/DatePicker/Locale/zh_CN';
 import Dialog from '../Dialog/BaseDialog/Locale/zh_CN';
 import InfoBar from '../InfoBar/Locale/zh_CN';
+import Kanban from '../Kanban/Locale/zh_CN';
 import Pagination from '../Pagination/Locale/zh_CN';
 import Panel from '../Panel/Locale/zh_CN';
 import PersistentBar from '../PersistentBar/Locale/zh_CN';
@@ -73,6 +74,7 @@ const localeValues: Locale = {
     },
   },
   InfoBar,
+  Kanban,
   Pagination,
   Panel,
   PersistentBar,

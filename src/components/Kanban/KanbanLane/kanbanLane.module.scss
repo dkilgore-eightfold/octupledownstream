@@ -1,0 +1,145 @@
+.lane-container {
+  height: calc(100% - 64px);
+  position: relative;
+
+  &:has(.sub-lane) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    width: auto;
+
+    &:first-child {
+      padding-left: $space-m;
+    }
+
+    &:last-child {
+      padding-right: $space-m;
+    }
+  }
+
+  .hidden-card {
+    display: none;
+  }
+
+  .lane,
+  .sub-lane {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    height: 100%;
+  }
+
+  .sub-lane {
+    background: var(--kanban-sub-lane-background-color);
+    border-radius: var(--kanban-sub-lane-border-radius);
+    padding-bottom: 50px;
+
+    .header {
+      color: var(--kanban-sub-lane-header-text-color);
+      font-family: var(--kanban-sub-lane-header-font-family);
+      font-weight: var(--kanban-sub-lane-header-font-weight);
+      margin-bottom: $space-xs;
+      padding: $space-m $space-m 0;
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  .list {
+    @include scroll-bars();
+    padding-bottom: 80px;
+  }
+
+  .dropzone-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    &.active {
+      opacity: 1;
+      z-index: 5;
+    }
+
+    .dropzone {
+      background: var(--kanban-dropzone-background-color);
+      border: var(--kanban-dropzone-border);
+      border-radius: var(--kanban-dropzone-border-radius);
+      flex: 1;
+      height: 100%;
+      padding: $space-m;
+
+      @media (max-width: 1440px) {
+        padding: $space-xs;
+        font-size: $text-font-size-2;
+      }
+
+      &.disabled {
+        background: var(--kanban-dropzone-disabled-background-color);
+        border-color: transparent;
+      }
+
+      &.hovering:not(.disabled) {
+        background: var(--kanban-dropzone-hover-background-color);
+      }
+
+      .dropzone-name {
+        color: var(--kanban-dropzone-name-text-color);
+        font-family: var(--kanban-dropzone-name-font-family);
+        font-size: var(--kanban-dropzone-name-font-size);
+        font-weight: var(--kanban-dropzone-name-font-weight);
+        line-height: var(--kanban-dropzone-name-line-height);
+      }
+    }
+  }
+
+  &-horizontal {
+    &:has(.sub-lane) {
+      flex: 1;
+      flex-direction: row;
+      width: 100%;
+
+      &:first-child {
+        padding-left: unset;
+      }
+
+      &:last-child {
+        padding-bottom: $space-m;
+        padding-right: unset;
+      }
+    }
+
+    .lane,
+    .sub-lane {
+      gap: $space-xs;
+      width: 100%;
+    }
+
+    .sub-lane {
+      padding-bottom: $space-xxl;
+
+      &-with-items {
+        min-height: 320px;
+      }
+    }
+
+    .list {
+      padding-bottom: $space-xxl;
+    }
+
+    .dropzone-container {
+      .dropzone {
+        flex: 1;
+        width: 100%;
+      }
+    }
+  }
+}
