@@ -149,7 +149,7 @@ export interface CardProps extends OcBaseProps<HTMLDivElement> {
    */
   size?: CardSize | Size;
   /**
-   * The button style.
+   * The card style.
    */
   style?: React.CSSProperties;
   /**
