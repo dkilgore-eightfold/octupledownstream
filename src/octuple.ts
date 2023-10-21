@@ -36,7 +36,7 @@ import {
 
 import { Card, CardSize, CardType } from './components/Card';
 
-import { Carousel, Slide } from './components/Carousel';
+import { Carousel, Slide, VisibilityContext } from './components/Carousel';
 
 import {
   CheckBox,
@@ -164,6 +164,13 @@ import {
 } from './components/Skeleton';
 
 import { Select, SelectShape, SelectSize } from './components/Select';
+
+import {
+  SkillBlock,
+  SkillSize,
+  SkillStatus,
+  SkillTag,
+} from './components/Skill';
 
 import {
   Slider,
@@ -393,6 +400,10 @@ export {
   SecondaryButton,
   Shape,
   Size,
+  SkillBlock,
+  SkillSize,
+  SkillStatus,
+  SkillTag,
   Slide,
   Slider,
   SliderMarks,
@@ -450,4 +461,5 @@ export {
   useMaxVisibleSections,
   useOnClickOutside,
   useScrollLock,
+  VisibilityContext,
 };

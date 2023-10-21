@@ -362,9 +362,9 @@
   --anchor-secondary-active-color: var(--grey-color-90);
   --anchor-hover-color: var(--primary-color-90);
   --anchor-disruptive-hover-color: var(--disruptive-secondary-color);
-  --anchor-neutral-hover-color: var(--primary-secondary-color);
+  --anchor-neutral-hover-color: var(--grey-secondary-color);
   --anchor-primary-hover-color: var(--primary-secondary-color);
-  --anchor-secondary-hover-color: var(--primary-secondary-color);
+  --anchor-secondary-hover-color: var(--grey-color-90);
   --anchor-visited-color: var(--violet-secondary-color);
   --anchor-disruptive-visited-color: var(--violet-secondary-color);
   --anchor-neutral-visited-color: var(--violet-secondary-color);
@@ -405,6 +405,7 @@
   --input-text-color: var(--text-primary-color);
   --input-placeholder-text-color: var(--text-secondary-color);
   --input-readonly-background-color: var(--grey-background1-color);
+  --input-readonly-border-color: var(--grey-tertiary-color);
   --input-readonly-text-color: var(--text-primary-color);
   --input-success-text-color: var(--text-primary-color);
   --input-success-border-color: var(--input-border-color);
@@ -1376,12 +1377,47 @@
   --progress-border-color: var(--primary-tertiary-color);
   --progress-complete-background-color: var(--primary-tertiary-color);
   --progress-error-background-color: var(--error-color);
+  --progress-error-inner-background-color: var(--disruptive-background1-color);
   --progress-error-border-color: var(--error-color);
   --progress-error-text-color: var(--error-color);
-  --progress-incomplete-background-color: var(--accent-background1-color);
+  --progress-pill-error-background-color: var(--error-background-color);
+  --progress-pill-error-inner-background-color: var(
+    --disruptive-background1-color
+  );
+  --progress-pill-error-inner-default-border-color: var(
+    --error-background-color
+  );
+  --progress-pill-error-inner-border-color: var(--progress-error-border-color);
+  --progress-pill-error-outer-border-color: var(--progress-error-border-color);
+  --progress-incomplete-background-color: var(--primary-background1-color);
+  --progress-pill-background-color: var(--primary-background1-color);
+  --progress-pill-outer-border-color: var(--primary-tertiary-color);
+  --progress-pill-inner-complete-background-color: var(
+    --progress-complete-background-color
+  );
+  --progress-pill-inner-incomplete-background-color: var(
+    --progress-incomplete-background-color
+  );
+  --progress-pill-inner-background-color: var(--background-color);
+  --progress-pill-inner-default-border-color: var(--primary-background1-color);
+  --progress-pill-inner-border-color: var(--progress-border-color);
   --progress-success-background-color: var(--success-color);
+  --progress-success-inner-background-color: var(--green-background1-color);
   --progress-success-border-color: var(--success-color);
   --progress-success-text-color: var(--success-color);
+  --progress-pill-success-background-color: var(--success-background-color);
+  --progress-pill-success-inner-background-color: var(
+    --green-background1-color
+  );
+  --progress-pill-success-inner-default-border-color: var(
+    --success-background-color
+  );
+  --progress-pill-success-outer-border-color: var(
+    --progress-success-border-color
+  );
+  --progress-pill-success-inner-border-color: var(
+    --progress-success-border-color
+  );
   --progress-text-color: var(--text-primary-color);
   // ------ Progress theme ------
 
@@ -1450,4 +1486,50 @@
   --kanban-sub-lane-header-font-family: var(--font-stack-full);
   --kanban-sub-lane-header-font-weight: 600;
   // ------ Kanban theme ------
+
+  // ------ Skill theme ------
+  --skill-border-color: var(--grey-background2-color);
+  --skill-border-width: 1px;
+  --skill-border-style: solid;
+  --skill-border: var(--skill-border-width) var(--skill-border-style)
+    var(--skill-border-color);
+  --skill-block-border-radius: 12px;
+  --skill-button-neutral-background-color: var(
+    --button-neutral-background-color
+  );
+  --skill-button-neutral-active-background-color: var(
+    --button-neutral-active-background-color
+  );
+  --skill-button-neutral-hover-background-color: var(
+    --button-neutral-hover-background-color
+  );
+  --skill-button-neutral-focus-visible-background-color: var(
+    --button-neutral-focus-visible-background-color
+  );
+  --skill-button-counter-default-background-color: var(
+    --button-counter-default-background-color
+  );
+  --skill-button-counter-hover-background-color: var(
+    --button-counter-hover-background-color
+  );
+  --skill-button-counter-checked-background-color: var(
+    --button-counter-checked-background-color
+  );
+  --skill-button-counter-focus-background-color: var(
+    --button-counter-focus-background-color
+  );
+  --skill-button-counter-active-background-color: var(
+    --button-counter-active-background-color
+  );
+  --skill-button-counter-default-text-color: var(
+    --button-neutral-counter-default-text-color
+  );
+  --skill-divider-color: var(--grey-background2-color);
+  --skill-divider-active-color: var(--grey-background3-color);
+  --skill-divider-hover-color: var(--grey-background3-color);
+  --skill-large-size-border-radius: var(--border-radius-m);
+  --skill-medium-size-border-radius: var(--border-radius-m);
+  --skill-small-size-border-radius: var(--border-radius-s);
+  --skill-xsmall-size-border-radius: var(--border-radius-s);
+  // ------ Skill theme ------
 }
