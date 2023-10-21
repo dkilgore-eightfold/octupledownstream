@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
+import { OcBaseProps } from '../OcBase';
 
-export interface FadeInProps {
+export interface FadeInProps extends OcBaseProps<HTMLDivElement> {
   /**
    * The FadeIn child renderer.
    */
@@ -19,12 +20,4 @@ export interface FadeInProps {
    * @default false
    */
   disabled?: boolean;
-  /**
-   * Custom classes of FadeIn.
-   */
-  classNames?: string;
-  /**
-   * The FadeIn test id.
-   */
-  'data-testid'?: string;
 }
