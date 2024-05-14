@@ -1,3 +1,5 @@
+'use client';
+
 import React, {
   useContext,
   useEffect,
@@ -5,21 +7,27 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { mergeClasses, stopPropagation } from '../../shared/utilities';
+import GradientContext, { Gradient } from '../ConfigProvider/GradientContext';
+import { OcThemeName } from '../ConfigProvider';
+import ThemeContext, {
+  ThemeContextProvider,
+} from '../ConfigProvider/ThemeContext';
 import { PanelLocale, PanelProps, PanelRef, PanelSize } from './';
+import { Button, ButtonShape, ButtonVariant } from '../Button';
 import { IconName } from '../Icon';
-import { ButtonShape, NeutralButton } from '../Button';
 import { Portal } from '../Portal';
-import { useScrollLock } from '../../hooks/useScrollLock';
 import { FocusTrap } from '../../shared/FocusTrap';
 import { NoFormStyle } from '../Form/Context';
 import { useCanvasDirection } from '../../hooks/useCanvasDirection';
+import { useScrollLock } from '../../hooks/useScrollLock';
+import { mergeClasses, stopPropagation } from '../../shared/utilities';
 import LocaleReceiver, {
   useLocaleReceiver,
 } from '../LocaleProvider/LocaleReceiver';
 import enUS from './Locale/en_US';
 
 import styles from './panel.module.scss';
+import themedComponentStyles from './panel.theme.module.scss';
 
 const PanelContext = React.createContext<PanelRef | null>(null);
 
@@ -38,18 +46,25 @@ export const Panel = React.forwardRef<PanelRef, PanelProps>(
       autoFocus = true,
       bodyClassNames,
       bodyPadding = true,
-      headerPadding = true,
       children,
       closable = true,
       closeButtonAriaLabelText: defaultCloseButtonAriaLabelText,
       closeButtonProps,
       closeIcon = IconName.mdiClose,
+      configContextProps = {
+        noGradientContext: false,
+        noThemeContext: false,
+      },
+      firstFocusableSelector,
       footer,
       footerClassNames,
+      gradient = false,
       headerButtonProps,
       headerClassNames,
       headerIcon = IconName.mdiArrowLeftThick,
+      headerPadding = true,
       height,
+      lastFocusableSelector,
       locale = enUS,
       maskClosable = true,
       onClose = () => {},
@@ -59,15 +74,19 @@ export const Panel = React.forwardRef<PanelRef, PanelProps>(
       panelClassNames,
       panelStyle,
       panelWrapperClassNames,
-      parent = document.body,
+      parent = typeof document !== 'undefined' ? document.body : null,
       placement = 'right',
       push = true,
+      renderContentAlways = true,
       size = PanelSize.medium,
+      skipFocusableSelectorsFromIndex,
       title,
       visible = false,
       width,
       panelHeader,
       scrollLock = true,
+      theme,
+      themeContainerId,
       focusTrap = true,
       ...rest
     } = props;
@@ -80,6 +99,16 @@ export const Panel = React.forwardRef<PanelRef, PanelProps>(
     const [internalPush, setPush] = useState<boolean>(false);
 
     useScrollLock(parent, !scrollLock ? false : visible);
+
+    const contextualGradient: Gradient = useContext(GradientContext);
+    const mergedGradient: boolean = configContextProps.noGradientContext
+      ? gradient
+      : contextualGradient || gradient;
+
+    const contextualTheme: OcThemeName = useContext(ThemeContext);
+    const mergedTheme: OcThemeName = configContextProps.noThemeContext
+      ? theme
+      : contextualTheme || theme;
 
     // ============================ Strings ===========================
     const [panelLocale] = useLocaleReceiver('Panel');
@@ -115,6 +144,7 @@ export const Panel = React.forwardRef<PanelRef, PanelProps>(
 
     const panelClasses: string = mergeClasses([
       styles.panel,
+      { [themedComponentStyles.theme]: mergedTheme },
       { [styles.noBodyPadding]: bodyPadding === false },
       { [styles.noHeaderPadding]: headerPadding === false },
       panelClassNames,
@@ -159,8 +189,10 @@ export const Panel = React.forwardRef<PanelRef, PanelProps>(
       <div className={headerClasses}>
         <div>
           {headerButtonProps && (
-            <NeutralButton
+            <Button
               classNames={styles.headerButton}
+              configContextProps={configContextProps}
+              gradient={mergedGradient}
               iconProps={{
                 path: headerIcon,
               }}
@@ -168,6 +200,9 @@ export const Panel = React.forwardRef<PanelRef, PanelProps>(
                 transform: htmlDir === 'rtl' ? 'rotate(180deg)' : 'none',
               }}
               shape={ButtonShape.Round}
+              theme={mergedTheme}
+              themeContainerId={themeContainerId}
+              variant={ButtonVariant.Neutral}
               {...headerButtonProps}
             />
           )}
@@ -175,29 +210,49 @@ export const Panel = React.forwardRef<PanelRef, PanelProps>(
         </div>
         <span className={styles.headerButtons}>
           {actionButtonThreeProps && (
-            <NeutralButton
+            <Button
+              configContextProps={configContextProps}
+              gradient={mergedGradient}
               shape={ButtonShape.Round}
+              theme={mergedTheme}
+              themeContainerId={themeContainerId}
+              variant={ButtonVariant.Neutral}
               {...actionButtonThreeProps}
             />
           )}
           {actionButtonTwoProps && (
-            <NeutralButton
+            <Button
+              configContextProps={configContextProps}
+              gradient={mergedGradient}
               shape={ButtonShape.Round}
+              theme={mergedTheme}
+              themeContainerId={themeContainerId}
+              variant={ButtonVariant.Neutral}
               {...actionButtonTwoProps}
             />
           )}
           {actionButtonOneProps && (
-            <NeutralButton
+            <Button
+              configContextProps={configContextProps}
+              gradient={mergedGradient}
               shape={ButtonShape.Round}
+              theme={mergedTheme}
+              themeContainerId={themeContainerId}
+              variant={ButtonVariant.Neutral}
               {...actionButtonOneProps}
             />
           )}
           {closable && (
-            <NeutralButton
+            <Button
+              configContextProps={configContextProps}
+              gradient={mergedGradient}
               iconProps={{ path: closeIcon }}
               ariaLabel={closeButtonAriaLabelText}
               onClick={onClose}
               shape={ButtonShape.Round}
+              theme={mergedTheme}
+              themeContainerId={themeContainerId}
+              variant={ButtonVariant.Neutral}
               {...closeButtonProps}
             />
           )}
@@ -280,6 +335,11 @@ export const Panel = React.forwardRef<PanelRef, PanelProps>(
               <PanelContext.Provider value={operations}>
                 <NoFormStyle status override>
                   <FocusTrap
+                    firstFocusableSelector={firstFocusableSelector}
+                    lastFocusableSelector={lastFocusableSelector}
+                    skipFocusableSelectorsFromIndex={
+                      skipFocusableSelectorsFromIndex
+                    }
                     trap={visible && focusTrap}
                     {...rest}
                     ref={containerRef}
@@ -289,16 +349,26 @@ export const Panel = React.forwardRef<PanelRef, PanelProps>(
                     }}
                     aria-hidden={!visible}
                   >
-                    <div
-                      ref={panelRef}
-                      className={panelClasses}
-                      onClick={stopPropagation}
-                      style={getPanelStyle()}
+                    <ThemeContextProvider
+                      componentClassName={themedComponentStyles.theme}
+                      containerId={themeContainerId}
+                      theme={mergedTheme}
                     >
-                      {getHeader()}
-                      {getBody()}
-                      {!!footer && getFooter()}
-                    </div>
+                      <div
+                        ref={panelRef}
+                        className={panelClasses}
+                        onClick={stopPropagation}
+                        style={getPanelStyle()}
+                      >
+                        {renderContentAlways && (
+                          <>
+                            {getHeader()}
+                            {getBody()}
+                            {!!footer && getFooter()}
+                          </>
+                        )}
+                      </div>
+                    </ThemeContextProvider>
                   </FocusTrap>
                 </NoFormStyle>
               </PanelContext.Provider>

@@ -6,7 +6,6 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
     class="stack kanban-board kanban-board-test-class horizontal undefined gap-m"
     data-testid="test-kanbanboard"
     id="kanbanBoardTestId"
-    items="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
     style="background: red;"
   >
     <div
@@ -29,7 +28,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
               Lane 1
             </span>
             <span
-              class="badge"
+              class="badge badge-medium"
             >
               8
             </span>
@@ -87,7 +86,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                               class="card card card-bordered list card-small"
                               data-testid="test-kanbancard-0"
                               focus-visible-id="focus-visible-target"
-                              id="ochwo0c"
+                              id="khtythk"
                             >
                               <div
                                 class="stack full-width vertical undefined gap-s"
@@ -104,14 +103,14 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                     <input
                                       aria-disabled="false"
                                       aria-label="Select card"
-                                      id="g65ga5d"
+                                      id="w9jmx2q"
                                       readonly=""
                                       type="checkbox"
                                       value=""
                                     />
                                     <label
                                       class=""
-                                      for="g65ga5d"
+                                      for="w9jmx2q"
                                     >
                                       <span
                                         class="checkmark"
@@ -130,7 +129,6 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    aria-checked="false"
                                     aria-disabled="false"
                                     aria-label="Expand"
                                     aria-pressed="false"
@@ -179,7 +177,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                   style="height: 0px; opacity: 0; margin-top: -8px;"
                                 >
                                   <div
-                                    class="stack vertical undefined gap-m"
+                                    class="stack full-width vertical undefined gap-m"
                                     dir="ltr"
                                     style="justify-content: flex-end;"
                                   >
@@ -223,7 +221,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                               class="card card card-bordered list card-small"
                               data-testid="test-kanbancard-1"
                               focus-visible-id="focus-visible-target"
-                              id="yhsxeuz"
+                              id="4fnz2le"
                             >
                               <div
                                 class="stack full-width vertical undefined gap-s"
@@ -240,14 +238,14 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                     <input
                                       aria-disabled="false"
                                       aria-label="Select card"
-                                      id="1driuq4"
+                                      id="sfc39zb"
                                       readonly=""
                                       type="checkbox"
                                       value=""
                                     />
                                     <label
                                       class=""
-                                      for="1driuq4"
+                                      for="sfc39zb"
                                     >
                                       <span
                                         class="checkmark"
@@ -266,7 +264,6 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    aria-checked="false"
                                     aria-disabled="false"
                                     aria-label="Expand"
                                     aria-pressed="false"
@@ -315,7 +312,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                   style="height: 0px; opacity: 0; margin-top: -8px;"
                                 >
                                   <div
-                                    class="stack vertical undefined gap-m"
+                                    class="stack full-width vertical undefined gap-m"
                                     dir="ltr"
                                     style="justify-content: flex-end;"
                                   >
@@ -359,7 +356,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                               class="card card card-bordered list card-small"
                               data-testid="test-kanbancard-2"
                               focus-visible-id="focus-visible-target"
-                              id="z9lu83n"
+                              id="vxd23k2"
                             >
                               <div
                                 class="stack full-width vertical undefined gap-s"
@@ -376,14 +373,14 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                     <input
                                       aria-disabled="false"
                                       aria-label="Select card"
-                                      id="bmkm5yy"
+                                      id="7ccz8ut"
                                       readonly=""
                                       type="checkbox"
                                       value=""
                                     />
                                     <label
                                       class=""
-                                      for="bmkm5yy"
+                                      for="7ccz8ut"
                                     >
                                       <span
                                         class="checkmark"
@@ -402,7 +399,6 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    aria-checked="false"
                                     aria-disabled="false"
                                     aria-label="Expand"
                                     aria-pressed="false"
@@ -451,7 +447,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                   style="height: 0px; opacity: 0; margin-top: -8px;"
                                 >
                                   <div
-                                    class="stack vertical undefined gap-m"
+                                    class="stack full-width vertical undefined gap-m"
                                     dir="ltr"
                                     style="justify-content: flex-end;"
                                   >
@@ -509,7 +505,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
               Lane 2
             </span>
             <span
-              class="badge"
+              class="badge badge-medium"
             >
               0
             </span>
@@ -519,7 +515,6 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
             style="align-items: center;"
           >
             <button
-              aria-checked="false"
               aria-disabled="false"
               aria-label="Expand"
               aria-pressed="false"
@@ -638,7 +633,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
               Lane 3
             </span>
             <span
-              class="badge"
+              class="badge badge-medium"
             >
               0
             </span>

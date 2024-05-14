@@ -12,7 +12,7 @@ exports[`KanbanCard Renders Basic KanbanCard without crashing 1`] = `
         class="card card card-bordered list card-small"
         data-testid="test-kanbancard"
         focus-visible-id="focus-visible-target"
-        id="9vrnnr2"
+        id="znbqzk7"
       >
         <div
           class="stack full-width vertical undefined gap-s"
@@ -31,7 +31,6 @@ exports[`KanbanCard Renders Basic KanbanCard without crashing 1`] = `
               </div>
             </div>
             <button
-              aria-checked="false"
               aria-disabled="false"
               aria-label="Expand"
               aria-pressed="false"
@@ -78,7 +77,7 @@ exports[`KanbanCard Renders Basic KanbanCard without crashing 1`] = `
             style="height: 0px; opacity: 0; margin-top: 0px;"
           >
             <div
-              class="stack vertical undefined gap-m"
+              class="stack full-width vertical undefined gap-m"
               dir="ltr"
               style="justify-content: flex-end;"
             >

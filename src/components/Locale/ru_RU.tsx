@@ -3,6 +3,7 @@ import type { Locale } from '../LocaleProvider';
 import Breadcrumb from '../Breadcrumb/Locale/ru_RU';
 import DatePicker from '../DateTimePicker/DatePicker/Locale/ru_RU';
 import Dialog from '../Dialog/BaseDialog/Locale/ru_RU';
+import Drawer from '../Drawer/Locale/ru_RU';
 import InfoBar from '../InfoBar/Locale/ru_RU';
 import Kanban from '../Kanban/Locale/ru_RU';
 import Pagination from '../Pagination/Locale/ru_RU';
@@ -23,6 +24,7 @@ const localeValues: Locale = {
   Breadcrumb,
   DatePicker,
   Dialog,
+  Drawer,
   Form: {
     defaultValidateMessages: {
       default: 'Ошибка проверки поля ${label}',

@@ -2,6 +2,7 @@ import type { Locale } from '../LocaleProvider';
 import Breadcrumb from '../Breadcrumb/Locale/hu_HU';
 import DatePicker from '../DateTimePicker/DatePicker/Locale/hu_HU';
 import Dialog from '../Dialog/BaseDialog/Locale/hu_HU';
+import Drawer from '../Drawer/Locale/hu_HU';
 import InfoBar from '../InfoBar/Locale/hu_HU';
 import Kanban from '../Kanban/Locale/hu_HU';
 import Pagination from '../Pagination/Locale/hu_HU';
@@ -17,6 +18,7 @@ const localeValues: Locale = {
   Breadcrumb,
   DatePicker,
   Dialog,
+  Drawer,
   InfoBar,
   Kanban,
   Pagination,

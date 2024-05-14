@@ -3,6 +3,7 @@ import type { Locale } from '../LocaleProvider';
 import Breadcrumb from '../Breadcrumb/Locale/de_DE';
 import DatePicker from '../DateTimePicker/DatePicker/Locale/de_DE';
 import Dialog from '../Dialog/BaseDialog/Locale/de_DE';
+import Drawer from '../Drawer/Locale/de_DE';
 import InfoBar from '../InfoBar/Locale/de_DE';
 import Kanban from '../Kanban/Locale/de_DE';
 import Pagination from '../Pagination/Locale/de_DE';
@@ -23,6 +24,7 @@ const localeValues: Locale = {
   Breadcrumb,
   DatePicker,
   Dialog,
+  Drawer,
   Form: {
     defaultValidateMessages: {
       default: 'Feld-Validierungsfehler: ${label}',

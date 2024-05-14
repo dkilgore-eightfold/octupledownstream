@@ -3,7 +3,12 @@ import { IconName, IconProps } from '../Icon';
 import { LabelProps } from '../Label';
 import { OcBaseProps } from '../OcBase';
 import type { InputStatus } from '../../shared/utilities';
-import { ConfigContextProps, Shape, Size } from '../ConfigProvider';
+import {
+  ConfigContextProps,
+  OcThemeName,
+  Shape,
+  Size,
+} from '../ConfigProvider';
 
 export enum TextInputIconAlign {
   Left = 'left',
@@ -107,6 +112,10 @@ export interface ReadOnlyProps {
 
 export interface SearchBoxProps
   extends Omit<InputProps<HTMLInputElement>, 'htmlType'> {
+  /**
+   * The input search button aria label text.
+   */
+  searchButtonAriaLabel?: string;
   /**
    * onclear event handler.
    */
@@ -373,6 +382,17 @@ export interface InputProps<T>
    * the validation status.
    */
   status?: InputStatus;
+  /**
+   * Theme of the input.
+   * Use with configContextProps.noThemeContext to override theme.
+   * @default blue
+   */
+  theme?: OcThemeName;
+  /**
+   * Theme container of the input.
+   * Use with `theme` to generate a unique container or a common one.
+   */
+  themeContainerId?: string;
   /**
    * The value of the input.
    */

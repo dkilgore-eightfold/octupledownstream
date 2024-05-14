@@ -1,6 +1,20 @@
-import React, { FC } from 'react';
-import { PopupProps, PopupRef, PopupSize, PopupTheme } from './Popup.types';
-import { Tooltip, TooltipSize, TooltipTheme, TooltipType } from '../Tooltip';
+'use client';
+
+import React, { FC, useRef } from 'react';
+import {
+  PopupProps,
+  PopupRef,
+  PopupSize,
+  PopupTheme,
+  PopupTouchInteraction,
+} from './Popup.types';
+import {
+  Tooltip,
+  TooltipSize,
+  TooltipTheme,
+  TooltipType,
+  TooltipTouchInteraction,
+} from '../Tooltip';
 import { useCanvasDirection } from '../../hooks/useCanvasDirection';
 import { mergeClasses, uniqueId } from '../../shared/utilities';
 
@@ -24,13 +38,19 @@ export const Popup: FC<PopupProps> = React.forwardRef<PopupRef, PopupProps>(
       tabIndex = 0,
       theme = PopupTheme.light,
       trigger = 'click',
+      touchInteraction = PopupTouchInteraction.Tap,
       popupStyle,
       ...rest
     },
     ref: React.ForwardedRef<PopupRef>
   ) => {
     const htmlDir: string = useCanvasDirection();
+
+    // TODO: Upgrade to React 18 and use the new `useId` hook.
+    // This way the id will match on the server and client.
+    // For now, pass an id via props if using SSR.
     const popupId: string = !!id ? id : uniqueId('popup-');
+
     const popupClassNames: string = mergeClasses([
       styles.popup,
       { [styles.small]: size === PopupSize.Small },
@@ -49,6 +69,14 @@ export const Popup: FC<PopupProps> = React.forwardRef<PopupRef, PopupProps>(
     const popupThemeToTooltipThemeMap = new Map<PopupTheme, TooltipTheme>([
       [PopupTheme.dark, TooltipTheme.dark],
       [PopupTheme.light, TooltipTheme.light],
+    ]);
+
+    const popupTouchToTooltipTouchMap = new Map<
+      PopupTouchInteraction,
+      TooltipTouchInteraction
+    >([
+      [PopupTouchInteraction.Tap, TooltipTouchInteraction.Tap],
+      [PopupTouchInteraction.TapAndHold, TooltipTouchInteraction.TapAndHold],
     ]);
 
     return (
@@ -71,6 +99,7 @@ export const Popup: FC<PopupProps> = React.forwardRef<PopupRef, PopupProps>(
         tooltipOnKeydown={popupOnKeydown}
         tooltipStyle={popupStyle}
         trigger={trigger}
+        touchInteraction={popupTouchToTooltipTouchMap.get(touchInteraction)}
         type={TooltipType.Popup}
       />
     );

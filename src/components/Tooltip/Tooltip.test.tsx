@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
 import Enzyme from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import MatchMediaMock from 'jest-matchmedia-mock';
 import { Tooltip, TooltipSize } from './';
-import { PrimaryButton } from '../Button';
+import { Button, ButtonVariant } from '../Button';
+import { Truncate } from '../Truncate';
+import useGestures, { Gestures } from '../../hooks/useGestures';
 import {
   fireEvent,
   getByTestId,
@@ -12,6 +14,9 @@ import {
   waitFor,
   waitForElementToBeRemoved,
 } from '@testing-library/react';
+import { renderHook } from '@testing-library/react-hooks';
+import '@testing-library/jest-dom/extend-expect';
+import 'window-resizeto/polyfill';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -22,6 +27,13 @@ const mockNavigator = (agent: string): void => {
   (navigator as any).__defineGetter__('userAgent', (): string => {
     return agent;
   });
+};
+
+jest.useFakeTimers();
+
+const fireResize = (width: number) => {
+  window.innerWidth = width;
+  window.dispatchEvent(new Event('resize'));
 };
 
 describe('Tooltip', () => {
@@ -101,6 +113,25 @@ describe('Tooltip', () => {
     expect(container.querySelector('.tooltip')).toBeFalsy();
   });
 
+  test('Tooltip is dismissed on escape when move hover on tooltip element only', async () => {
+    const { container } = render(
+      <Tooltip
+        content={<div data-testid="tooltip">This is a tooltip.</div>}
+        trigger="hover"
+      >
+        <div className="test-div">test</div>
+      </Tooltip>
+    );
+    fireEvent.mouseOver(container.querySelector('.test-div'));
+    await waitFor(() => screen.getByTestId('tooltip'));
+    expect(container.querySelector('.tooltip')).toBeTruthy();
+    fireEvent.mouseOver(container.querySelector('.tooltip'));
+    expect(container.querySelector('.tooltip')).toBeTruthy();
+    fireEvent.keyDown(container, { key: 'Escape' });
+    await waitForElementToBeRemoved(() => screen.getByTestId('tooltip'));
+    expect(container.querySelector('.tooltip')).toBeFalsy();
+  });
+
   test('Tooltip is not dismissed on random key when hover only', async () => {
     const { container } = render(
       <Tooltip
@@ -126,10 +157,11 @@ describe('Tooltip', () => {
         disabled
         trigger="hover"
       >
-        <PrimaryButton
+        <Button
           data-testid="test-button"
           onClick={() => (testCounter += 1)}
           text="Test button"
+          variant={ButtonVariant.Primary}
         />
       </Tooltip>
     );
@@ -339,31 +371,130 @@ describe('Tooltip', () => {
     expect(container.querySelector('.tooltip')).toBeFalsy();
   });
 
-  test('Tooltip uses mobile trigger, show, hide and show again', async () => {
+  test('Tooltip uses touch to show, hide and show again', async () => {
     mockNavigator(
       `Mozilla/5.0 (iPad; CPU OS 10_2_1 like Mac OS X)
       AppleWebKit/602.4.6 (KHTML, like Gecko)
       Version/10.0 Mobile/14D27 Safari/602.1`
     );
-
     const { container } = render(
       <Tooltip
         data-testid="tooltip-test"
         content={<div data-testid="tooltip">This is a tooltip.</div>}
       >
-        <div className="test-div">test</div>
+        <Button
+          data-testid="test-button"
+          text="Test button"
+          variant={ButtonVariant.Primary}
+        />
       </Tooltip>
     );
-    fireEvent.mouseOver(container.querySelector('.test-div'));
-    expect(container.querySelector('.tooltip')).toBeFalsy();
-    fireEvent.click(container.querySelector('.test-div'));
+    const swipeTarget = screen.getByTestId('test-button');
+    const { result } = renderHook(() => useGestures(window));
+    fireEvent.touchStart(swipeTarget);
+    jest.advanceTimersByTime(300);
+    fireEvent.touchEnd(swipeTarget);
+    fireEvent.click(swipeTarget);
+    expect(result.current).toBe(Gestures.TapAndHold);
     await waitFor(() => screen.getByTestId('tooltip'));
     expect(container.querySelector('.tooltip')).toBeTruthy();
-    fireEvent.click(container.querySelector('.test-div'));
+    fireEvent.touchStart(swipeTarget);
+    jest.advanceTimersByTime(50);
+    fireEvent.touchEnd(swipeTarget);
+    fireEvent.click(swipeTarget);
+    expect(result.current).toBe(Gestures.Tap);
     await waitForElementToBeRemoved(() => screen.getByTestId('tooltip'));
     expect(container.querySelector('.tooltip')).toBeFalsy();
-    fireEvent.click(container.querySelector('.test-div'));
+    fireEvent.touchStart(swipeTarget);
+    jest.advanceTimersByTime(300);
+    fireEvent.touchEnd(swipeTarget);
+    fireEvent.click(swipeTarget);
+    expect(result.current).toBe(Gestures.TapAndHold);
     await waitFor(() => screen.getByTestId('tooltip'));
     expect(container.querySelector('.tooltip')).toBeTruthy();
+  });
+
+  test('disables tooltip when content is not truncated', async () => {
+    const TestComponent: FC = () => {
+      const [truncationStatus, setTruncationStatus] = useState<
+        Record<string, boolean>
+      >({});
+      const handleTruncationChange = (id: string, isTruncated: boolean) => {
+        setTruncationStatus((prev: Record<string, boolean>) => ({
+          ...prev,
+          [id]: isTruncated,
+        }));
+      };
+      return (
+        <Tooltip
+          content="Short content"
+          disabled={!truncationStatus['truncate2']}
+          data-testid="tooltip"
+        >
+          <Truncate
+            id="truncate2"
+            onTruncateChange={handleTruncationChange}
+            text="Short content"
+            data-testid="test-truncate-id"
+          />
+        </Tooltip>
+      );
+    };
+    const { getByTestId } = render(<TestComponent />);
+    const content = getByTestId('test-truncate-id');
+    fireEvent.mouseEnter(content);
+    await waitFor(() => expect(screen.queryByTestId('tooltip')).toBeNull());
+    expect(content.getAttribute('aria-describedby')).not.toBeNull();
+  });
+
+  test('enables tooltip when content is truncated', async () => {
+    // Mock clientWidth and scrollWidth
+    Object.defineProperties(HTMLElement.prototype, {
+      clientWidth: {
+        get() {
+          return 100;
+        }, // Mock clientWidth to be 100
+        configurable: true,
+      },
+      scrollWidth: {
+        get() {
+          return 200;
+        }, // Mock scrollWidth to be larger than clientWidth to simulate truncation
+        configurable: true,
+      },
+    });
+    const TestComponent: FC = () => {
+      const [truncationStatus, setTruncationStatus] = useState<
+        Record<string, boolean>
+      >({});
+      const handleTruncationChange = (id: string, isTruncated: boolean) => {
+        setTruncationStatus((prev: Record<string, boolean>) => ({
+          ...prev,
+          [id]: isTruncated,
+        }));
+      };
+      return (
+        <Tooltip
+          content="Very long content that will definitely be truncated"
+          disabled={!truncationStatus['truncate2']}
+          data-testid="tooltip"
+        >
+          <Truncate
+            id="truncate2"
+            onTruncateChange={handleTruncationChange}
+            text="Very long content that will definitely be truncated"
+            data-testid="test-truncate-id"
+          />
+        </Tooltip>
+      );
+    };
+    await waitFor(() => {
+      fireResize(100);
+    });
+    const { getByTestId } = render(<TestComponent />);
+    const content = getByTestId('test-truncate-id');
+    fireEvent.mouseEnter(content);
+    await waitFor(() => screen.getByTestId('tooltip'));
+    expect(content.getAttribute('aria-describedby')).not.toBeNull();
   });
 });

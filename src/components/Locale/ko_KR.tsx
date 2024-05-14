@@ -3,6 +3,7 @@ import type { Locale } from '../LocaleProvider';
 import Breadcrumb from '../Breadcrumb/Locale/ko_KR';
 import DatePicker from '../DateTimePicker/DatePicker/Locale/ko_KR';
 import Dialog from '../Dialog/BaseDialog/Locale/ko_KR';
+import Drawer from '../Drawer/Locale/ko_KR';
 import InfoBar from '../InfoBar/Locale/ko_KR';
 import Kanban from '../Kanban/Locale/ko_KR';
 import Pagination from '../Pagination/Locale/ko_KR';
@@ -20,6 +21,7 @@ const localeValues: Locale = {
   Breadcrumb,
   DatePicker,
   Dialog,
+  Drawer,
   Form: {
     defaultValidateMessages: {
       default: '필드 유효성 검사 오류 ${label}',

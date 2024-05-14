@@ -1,11 +1,17 @@
 import React from 'react';
+import {
+  ConfigContextProps,
+  OcThemeName,
+  Shape,
+  Size,
+} from '../ConfigProvider';
+import { OcBaseProps } from '../OcBase';
 import { DropdownProps } from '../Dropdown';
 import { TextInputProps, TextInputWidth } from '../Inputs';
 import { MenuProps } from '../Menu';
-import { OcBaseProps } from '../OcBase';
 import { PillProps } from '../Pills';
 import { MenuItemButtonProps } from '../Menu/MenuItem/MenuItem.types';
-import { ConfigContextProps, Shape, Size } from '../ConfigProvider';
+import { InputStatus } from '../../shared/utilities';
 
 export enum SelectShape {
   Rectangle = 'rectangle',
@@ -101,14 +107,16 @@ export interface SelectProps
    */
   formItemInput?: boolean;
   /**
+   * Optionally place focus on the first focusable
+   * selector when the Dropdown is first visible.
+   * When false, visibility will be placed on the Dropdown.
+   * @default `filterable ? false : true`
+   */
+  initialFocus?: boolean;
+  /**
    * The Select input custom class names.
    */
   inputClassNames?: string;
-  /**
-   * The Select input is readonly.
-   * @default false
-   */
-  readonly?: boolean;
   /**
    * Width of the Select text input.
    * @default TextInputWidth.fitContent
@@ -123,6 +131,11 @@ export interface SelectProps
    * For async loading of options.
    */
   loadOptions?: (inputValue: string) => void;
+  /**
+   * Auto collapse to pill with responsive behavior.
+   * @default true
+   */
+  maxPillCount?: boolean;
   /**
    * The Dropdown Menu props.
    * @default {}
@@ -166,6 +179,11 @@ export interface SelectProps
    */
   pillProps?: PillProps;
   /**
+   * The Select input is readonly.
+   * @default false
+   */
+  readonly?: boolean;
+  /**
    * Shape of the select.
    * @default SelectShape.Rectangle
    */
@@ -186,8 +204,38 @@ export interface SelectProps
    */
   spinner?: React.ReactElement;
   /**
+   * the validation status.
+   */
+  status?: InputStatus;
+  /**
    * The select input props.
    * @default {}
    */
   textInputProps?: TextInputProps;
+  /**
+   * Theme of the select.
+   * Use with configContextProps.noThemeContext to override theme.
+   * @default blue
+   */
+  theme?: OcThemeName;
+  /**
+   * Theme container of the select.
+   * Use with `theme` to generate a unique container or a common one.
+   */
+  themeContainerId?: string;
+  /**
+   * The Select toggle dropdown chevron button aria label.
+   */
+  toggleButtonAriaLabel?: string;
+  /**
+   * Selected options may be toggled.
+   * Use when multiple is false as this is mutually exclusive.
+   * @default true
+   */
+  toggleOptions?: boolean;
+  /**
+   * The select value.
+   * @default undefined
+   */
+  value?: string | string[];
 }

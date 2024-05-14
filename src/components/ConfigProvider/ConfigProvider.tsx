@@ -1,3 +1,5 @@
+'use client';
+
 import React, {
   createContext,
   FC,
@@ -16,12 +18,15 @@ import {
   ThemeOptions,
 } from './Theming';
 import { useFocusVisibleClassName } from '../../hooks/useFocusVisibleClassName';
+import { ParentComponentsContextProvider } from './ParentComponentsContext';
 import { DisabledContextProvider } from './DisabledContext';
+import { GradientContextProvider } from './GradientContext';
 import { ShapeContextProvider } from './ShapeContext';
 import { SizeContextProvider } from './SizeContext';
 import { ValidateMessages } from '../Form/Internal/OcForm.types';
 import { OcFormProvider } from '../Form/Internal';
 import defaultLocale from '../Locale/Default';
+import { canUseDocElement } from '../../shared/utilities';
 
 const ConfigContext: React.Context<Partial<IConfigContext>> = createContext<
   Partial<IConfigContext>
@@ -30,10 +35,13 @@ const ConfigContext: React.Context<Partial<IConfigContext>> = createContext<
 const DEFAULT_THEME: string = 'blue';
 
 const DEFAULT_FOCUS_VISIBLE: boolean = true;
-const DEFAULT_FOCUS_VISIBLE_ELEMENT: HTMLElement = document.documentElement;
+const DEFAULT_FOCUS_VISIBLE_ELEMENT: HTMLElement = canUseDocElement()
+  ? document.documentElement
+  : null;
 
 const ConfigProvider: FC<ConfigProviderProps> = ({
   children,
+  componentName,
   disabled = false,
   focusVisibleOptions = {
     focusVisible: DEFAULT_FOCUS_VISIBLE,
@@ -41,6 +49,7 @@ const ConfigProvider: FC<ConfigProviderProps> = ({
   },
   fontOptions: defaultFontOptions,
   form,
+  gradient = false,
   icomoonIconSet = {},
   locale,
   shape,
@@ -99,7 +108,7 @@ const ConfigProvider: FC<ConfigProviderProps> = ({
       {};
   }
 
-  if (form && form.validateMessages) {
+  if (form?.validateMessages) {
     validateMessages = { ...validateMessages, ...form.validateMessages };
   }
 
@@ -127,11 +136,27 @@ const ConfigProvider: FC<ConfigProviderProps> = ({
     );
   }
 
+  if (gradient !== undefined) {
+    childNode = (
+      <GradientContextProvider gradient={gradient}>
+        {childNode}
+      </GradientContextProvider>
+    );
+  }
+
   if (disabled !== undefined) {
     childNode = (
       <DisabledContextProvider disabled={disabled}>
         {childNode}
       </DisabledContextProvider>
+    );
+  }
+
+  if (componentName !== undefined) {
+    childNode = (
+      <ParentComponentsContextProvider componentName={componentName}>
+        {childNode}
+      </ParentComponentsContextProvider>
     );
   }
 
