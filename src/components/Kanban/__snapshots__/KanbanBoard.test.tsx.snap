@@ -86,7 +86,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                               class="card card card-bordered list card-small"
                               data-testid="test-kanbancard-0"
                               focus-visible-id="focus-visible-target"
-                              id="khtythk"
+                              id="hep7bo2"
                             >
                               <div
                                 class="stack full-width vertical undefined gap-s"
@@ -103,14 +103,14 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                     <input
                                       aria-disabled="false"
                                       aria-label="Select card"
-                                      id="w9jmx2q"
+                                      id="tg7w72m"
                                       readonly=""
                                       type="checkbox"
                                       value=""
                                     />
                                     <label
                                       class=""
-                                      for="w9jmx2q"
+                                      for="tg7w72m"
                                     >
                                       <span
                                         class="checkmark"
@@ -221,7 +221,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                               class="card card card-bordered list card-small"
                               data-testid="test-kanbancard-1"
                               focus-visible-id="focus-visible-target"
-                              id="4fnz2le"
+                              id="7ediw4p"
                             >
                               <div
                                 class="stack full-width vertical undefined gap-s"
@@ -238,14 +238,14 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                     <input
                                       aria-disabled="false"
                                       aria-label="Select card"
-                                      id="sfc39zb"
+                                      id="hyyjll5"
                                       readonly=""
                                       type="checkbox"
                                       value=""
                                     />
                                     <label
                                       class=""
-                                      for="sfc39zb"
+                                      for="hyyjll5"
                                     >
                                       <span
                                         class="checkmark"
@@ -356,7 +356,7 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                               class="card card card-bordered list card-small"
                               data-testid="test-kanbancard-2"
                               focus-visible-id="focus-visible-target"
-                              id="vxd23k2"
+                              id="2xq00fi"
                             >
                               <div
                                 class="stack full-width vertical undefined gap-s"
@@ -373,14 +373,14 @@ exports[`KanbanBoard Renders KanbanBoard without crashing 1`] = `
                                     <input
                                       aria-disabled="false"
                                       aria-label="Select card"
-                                      id="7ccz8ut"
+                                      id="lj3pdnd"
                                       readonly=""
                                       type="checkbox"
                                       value=""
                                     />
                                     <label
                                       class=""
-                                      for="7ccz8ut"
+                                      for="lj3pdnd"
                                     >
                                       <span
                                         class="checkmark"

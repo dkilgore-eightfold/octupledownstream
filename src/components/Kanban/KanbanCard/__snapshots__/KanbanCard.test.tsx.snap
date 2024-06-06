@@ -12,7 +12,7 @@ exports[`KanbanCard Renders Basic KanbanCard without crashing 1`] = `
         class="card card card-bordered list card-small"
         data-testid="test-kanbancard"
         focus-visible-id="focus-visible-target"
-        id="znbqzk7"
+        id="zrfujxl"
       >
         <div
           class="stack full-width vertical undefined gap-s"

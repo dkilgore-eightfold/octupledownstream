@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import type { Locale } from '../LocaleProvider';
+import Accordion from '../Accordion/Locale/fr_FR';
 import Breadcrumb from '../Breadcrumb/Locale/fr_FR';
 import DatePicker from '../DateTimePicker/DatePicker/Locale/fr_FR';
 import Dialog from '../Dialog/BaseDialog/Locale/fr_FR';
@@ -19,6 +20,7 @@ const typeTemplate =
 
 const localeValues: Locale = {
   locale: 'fr',
+  Accordion,
   Breadcrumb,
   DatePicker,
   Dialog,

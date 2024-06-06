@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import type { Locale } from '../LocaleProvider';
+import Accordion from '../Accordion/Locale/zh_TW';
 import Breadcrumb from '../Breadcrumb/Locale/zh_TW';
 import DatePicker from '../DateTimePicker/DatePicker/Locale/zh_TW';
 import Dialog from '../Dialog/BaseDialog/Locale/zh_TW';
@@ -21,6 +22,7 @@ const localeValues: Locale = {
   global: {
     placeholder: '請選擇',
   },
+  Accordion,
   Breadcrumb,
   DatePicker,
   Dialog,
